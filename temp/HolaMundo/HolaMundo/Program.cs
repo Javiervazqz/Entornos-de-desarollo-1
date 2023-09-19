@@ -4,9 +4,9 @@
     {
         public static void Main(string[] args)
         {
-            int r3;
-            r3 = functions.Functions.Sumation(7);
-            System.Console.WriteLine(r3);
+            int r1;
+            r1 = funciones.Functions.Paresraros(20);
+            System.Console.WriteLine(r1);
         }
     }
 }
