@@ -1,2 +1,5 @@
 # Entornos-de-desarollo-1
-Entornos Javier Vazquez
+Este es el repositorio usado para entornos de desarrollo de 1º DAM
+------------------------------------------------------------------
+Javier Vázquez García
+------------------------------------------------------------------
