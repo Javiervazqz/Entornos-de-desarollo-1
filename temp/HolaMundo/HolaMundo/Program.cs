@@ -4,12 +4,9 @@
     {
         public static void Main(string[] args)
         {
-            int r1;
-            r1 = Functions.GetMayor(1, 2);
-            Console.WriteLine(r1);
-            int r2;
-            r2 = Functions.GetMayor(10, -1);
-            System.Console.WriteLine(r2);
+            int r3;
+            r3 = functions.Functions.Sumation(7);
+            System.Console.WriteLine(r3);
         }
     }
 }
