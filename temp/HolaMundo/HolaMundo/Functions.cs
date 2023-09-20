@@ -1,7 +1,4 @@
-﻿using System.Globalization;
-using System.Reflection.Metadata.Ecma335;
-
-namespace funciones
+﻿namespace func
 {
     internal class Functions
     {
@@ -32,13 +29,18 @@ namespace funciones
             }
             return j;
         }
+
+        public static bool OddEven(int n0)
+        {
+            if (n0 % 2 == 0)
+                return true;
+            return false;
+        }
+
         public static int Paresraros(int n1)
         {
-            int j = n1 - 1;
             int i = -2;
             {
-                if (i >= n1)
-                    return n1;
                 if (i > 0)
                     Console.WriteLine(i);
                     i += 2;
@@ -46,10 +48,10 @@ namespace funciones
                 Console.WriteLine(i);
                 i = -i;
                 i += 2;
-                
+
             }
-            return i;
+            return n1;
         }
-            
+
     }
 }
