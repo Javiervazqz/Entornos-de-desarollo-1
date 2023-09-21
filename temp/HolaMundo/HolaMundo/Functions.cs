@@ -1,4 +1,7 @@
-﻿namespace func
+﻿using System.Reflection.Metadata.Ecma335;
+using System.Runtime.Serialization.Formatters;
+
+namespace func
 {
     internal class Functions
     {
@@ -37,7 +40,7 @@
             return false;
         }
 
-        public static int Paresraros(int n1)
+        public static int Paresraro(int n1)
         {
             int i = -2;
             {
@@ -53,5 +56,15 @@
             return n1;
         }
 
+        public static int Paresraros(int n1)
+        {
+            for (int n2 = 0; n2 < n1; n2 += 2)
+                if (OddEven(n2 / 2))
+                    Console.WriteLine(-n2);
+                else
+                    Console.WriteLine(n2);
+            return n1;
+        }
+        
     }
 }
