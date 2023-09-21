@@ -39,23 +39,6 @@ namespace func
                 return true;
             return false;
         }
-
-        public static int Paresraro(int n1)
-        {
-            int i = -2;
-            {
-                if (i > 0)
-                    Console.WriteLine(i);
-                    i += 2;
-                    i = (-i);
-                Console.WriteLine(i);
-                i = -i;
-                i += 2;
-
-            }
-            return n1;
-        }
-
         public static int Paresraros(int n1)
         {
             for (int n2 = 0; n2 < n1; n2 += 2)
@@ -65,6 +48,6 @@ namespace func
                     Console.WriteLine(n2);
             return n1;
         }
-        
     }
+
 }
