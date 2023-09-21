@@ -50,27 +50,14 @@ namespace func
         {
             if (n1 == 2)
                 return true;
+            if (n1 == 3)
+                return true;
+            if (n1 % 3 == 0)
+                return false;
             if (n1 % 2 == 1)
                 return true;
             else
                 return false;
-        }
-        public static bool SeriesLuis(int n1)
-        {
-            int n2 = 0;
-            int k = 1;
-            bool l = (k == 1) || (k == -1);
-            while (l == true)
-                if (k == 1)
-                    Console.WriteLine(n2);
-                    n2 = n2 + 5;
-                    k = k * -1;
-                else
-                Console.WriteLine(n2);
-                n2 = n2 - 2;
-                k = k * -1;
-            return Convert.ToBoolean(n2);
-
         }
     }
 }
