@@ -1,5 +1,4 @@
 ﻿using System.Reflection.Metadata.Ecma335;
-using System.Runtime.Serialization.Formatters;
 
 namespace func
 {
@@ -24,9 +23,8 @@ namespace func
         }
         public static int Summation2(int n1)
         {
-            int i = 1;
             int j = 0;
-            for (i = 1; i <= n1; i++)
+            for (int i = 1; i <= n1; i++)
             {
                 j += i;
             }
@@ -39,7 +37,7 @@ namespace func
                 return true;
             return false;
         }
-        public static int Paresraros(int n1)
+        public static int ParesRaros(int n1)
         {
             for (int n2 = 0; n2 < n1; n2 += 2)
                 if (OddEven(n2 / 2))
@@ -48,6 +46,14 @@ namespace func
                     Console.WriteLine(n2);
             return n1;
         }
+        public static bool Prime(int n1)
+        {
+            if (n1 == 2)
+                return true;
+            if (n1 % 2 == 1)
+                return true;
+            else
+                return false;
+        }
     }
-
 }
