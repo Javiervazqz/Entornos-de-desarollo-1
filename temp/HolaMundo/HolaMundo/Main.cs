@@ -4,8 +4,8 @@
     {
         public static void Main(string[] args)
         {
-            bool r1;
-            r1 = func.Functions.Prime(7);
+            int r1;
+            r1 = func.Functions.Productorio(3);
             System.Console.WriteLine(r1); 
         }
     }

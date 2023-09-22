@@ -48,16 +48,40 @@ namespace func
         }
         public static bool Prime(int n1)
         {
-            if (n1 == 2)
-                return true;
-            if (n1 == 3)
-                return true;
-            if (n1 % 3 == 0)
-                return false;
-            if (n1 % 2 == 1)
-                return true;
-            else
-                return false;
+            for (int i = 2; i < n1; i++)
+                if ((n1 % i) == 0)
+                    return false;
+            return true;
+        }
+        public static int SeriesLuis(int n1)
+        {
+            int num = 0;
+            for (int i = 1; i <= n1; )
+            {
+                if (i == 1)
+                {
+                    num = num + 5;
+                    Console.WriteLine(num);
+                }
+                else
+                {
+                    num = num - 2;
+                    Console.WriteLine(num);
+                }
+                if (n1 <= n1)
+                    return n1;
+            }
+            return n1;
+        }
+        public static int Productorio(int n1)
+        {
+            int j = 1;
+            for (int i = 1; i <= n1; i++)
+            {
+                j *= i;
+                j += j;
+            }
+            return j;
         }
     }
 }
