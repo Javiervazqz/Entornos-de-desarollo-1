@@ -1,4 +1,5 @@
-﻿using System.Reflection.Metadata.Ecma335;
+﻿using System.Globalization;
+using System.Reflection.Metadata.Ecma335;
 
 namespace func
 {
@@ -73,15 +74,35 @@ namespace func
             }
             return n1;
         }
-        public static int Productorio(int n1)
+        public static int MenorTres(int n1, int n2, int n3)
         {
-            int j = 1;
-            for (int i = 1; i <= n1; i++)
-            {
-                j *= i;
-                j += j;
-            }
-            return j;
+            if ((n1 <= n2) && (n1 <= n3))
+                return n1;
+            if ((n3 <= n1) && (n3 <= n2))
+                return n3;
+            return n2;
+        }
+        public static int MenorTresDos(int n1, int n2, int n3)
+        {
+            if (n1 <= n2)
+                if (n2 <= n3)
+                    return n1;
+                return n2;
+            return n3;
+        }
+        public static int SerieRara(int n1)
+        {
+            for (int i = 0; n1 >= i; i += 2)
+                if (OddEven(i / 2))
+                    Console.WriteLine(-i);
+                else
+                    Console.WriteLine(i);
+            return n1;
+        }
+        public static int Luis(int n1)
+        {
+            int k = 1;
+            while ()
         }
     }
 }

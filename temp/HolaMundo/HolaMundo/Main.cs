@@ -5,7 +5,7 @@
         public static void Main(string[] args)
         {
             int r1;
-            r1 = func.Functions.Productorio(3);
+            r1 = func.Functions.SerieRara(7);
             System.Console.WriteLine(r1); 
         }
     }
