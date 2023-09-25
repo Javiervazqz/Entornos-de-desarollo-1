@@ -57,20 +57,21 @@ namespace func
         public static int SeriesLuis(int n1)
         {
             int num = 0;
-            for (int i = 1; i <= n1; )
+            for (int i = 1; num <= n1; i++)
             {
-                if (i == 1)
+                if (OddEven(i))
                 {
-                    num = num + 5;
-                    Console.WriteLine(num);
+                    num -= 2;
+                    i = -i;
                 }
                 else
                 {
-                    num = num - 2;
-                    Console.WriteLine(num);
+                    num += 5;
+                    i = -i;
                 }
-                if (n1 <= n1)
+                if (num >= n1)
                     return n1;
+                Console.WriteLine(num);
             }
             return n1;
         }
@@ -90,19 +91,14 @@ namespace func
                 return n2;
             return n3;
         }
-        public static int SerieRara(int n1)
+        public static int Productorio(int n1)
         {
-            for (int i = 0; n1 >= i; i += 2)
-                if (OddEven(i / 2))
-                    Console.WriteLine(-i);
-                else
-                    Console.WriteLine(i);
-            return n1;
-        }
-        public static int Luis(int n1)
-        {
-            int k = 1;
-            while ()
+            int j = 1;
+            for (int i = 1; i <= n1; i++)
+            {
+                j *= i;
+            }
+            return j;
         }
     }
 }

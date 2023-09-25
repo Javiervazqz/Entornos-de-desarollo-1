@@ -1,0 +1,10 @@
+﻿namespace Objetos
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            
+        }
+    }
+}
