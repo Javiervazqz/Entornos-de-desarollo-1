@@ -91,14 +91,5 @@ namespace func
                 return n2;
             return n3;
         }
-        public static int Productorio(int n1)
-        {
-            int j = 1;
-            for (int i = 1; i <= n1; i++)
-            {
-                j *= i;
-            }
-            return j;
-        }
     }
 }
