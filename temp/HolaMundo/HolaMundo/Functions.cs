@@ -91,5 +91,69 @@ namespace func
                 return n2;
             return n3;
         }
+        public static int Productory(int n1)
+        {
+            int j = 1;
+            for(int i = 1; i <= n1; i++)
+            {
+                j *= i;
+            }
+            return j;
+        }
+        public static int Paresrarisimos(int n1)
+        {
+            for (int i = 0; i <= n1; i+=2)
+            {
+                if (OddEven(i / 2))
+                    Console.WriteLine(i);
+                else
+                    Console.WriteLine(-i);
+            }
+            return n1;
+        }
+        public static int superluis(int n1)
+        {
+            int j = 0;
+            for (int i = 0; i <= n1; i++)
+            {
+                if (OddEven(i))
+                {
+                    j += 5;
+                }
+
+                else
+                {
+                    j -= 2;
+                }
+                if (j >= n1)
+                    return n1;
+                Console.WriteLine(j);
+            }
+            return n1;
+        }
+        public static int Examen(int n1)
+        {
+            int j = 0;
+            if (n1 <= 5)
+            {
+                for (int i = 0; i <= n1; i++)
+                {
+                    j += i;
+                }
+                return j;
+            }
+            else
+            {
+                j = 1;
+                for (int i = 1; i<=n1 ; i++)
+                {
+                    j *= i;
+                }
+                return j;
+                if (j >= n1)
+                    return n1;
+                return n1;
+            }
+        }
     }
 }
