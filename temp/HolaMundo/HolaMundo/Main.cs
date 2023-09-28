@@ -4,8 +4,8 @@
     {
         public static void Main(string[] args)
         {
-            int r1;
-            r1 = func.Functions.Examen(6);
+            bool r1;
+            r1 = func.Functions.Primo(5);
             System.Console.WriteLine(r1);
         }
     }
