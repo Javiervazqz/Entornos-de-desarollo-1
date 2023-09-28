@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace Objetos_y_todo_eso
+namespace Objetos
 {
     internal class Class1
     {
@@ -8,7 +8,9 @@ namespace Objetos_y_todo_eso
         {
             blue,
             white,
-            black
+            black,
+            red,
+            gold
         }
         public class Dolphin
         {

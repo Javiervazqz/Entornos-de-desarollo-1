@@ -155,5 +155,31 @@ namespace func
                 return n1;
             }
         }
+        public static string Conca(string n1, string n2)
+        {
+            return n1 + "," + n2;
+        }
+        public static string Serie1str(int n1)
+        {
+            string n2 = "";
+            int n3 = 1;
+            for(int i = 0; i <= n1; i++)
+            {
+                if (i >= n1)
+                    return n2;
+                n2 += "," + n3;
+                n3 *= 2;
+            }
+            return n2;
+        }
+        public static string ConcaSerie(int n1)
+        {
+            string n2 = "";
+            string n3 = "";
+            if (n1 <= 0)
+                return n2;
+            n3 = Conca(n2, n3);
+            return n3;
+        }
     }
 }

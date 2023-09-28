@@ -4,8 +4,8 @@
     {
         public static void Main(string[] args)
         {
-            bool r1;
-            r1 = func.Functions.Primo(5);
+            string r1;
+            r1 = func.Functions.ConcaSerie(7);
             System.Console.WriteLine(r1);
         }
     }
