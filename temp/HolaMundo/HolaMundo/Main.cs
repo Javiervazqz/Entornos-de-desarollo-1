@@ -5,7 +5,7 @@
         public static void Main(string[] args)
         {
             int r1;
-            r1 = func.Functions.Repeticion(5,5);
+            r1 = func.Functions.unoalcien(100);
             System.Console.WriteLine(r1);
         }
     }

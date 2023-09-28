@@ -201,5 +201,14 @@ namespace func
             }
             return n1;
         }
+        public void unoalcien(int n1)
+        {
+            for(int i = 1; i<= n1; i++)
+            {
+                if ((i % 2 == 0) || (i % 3 == 0))
+                    Console.WriteLine(i);
+            }
+            return;
+        }
     }
 }
