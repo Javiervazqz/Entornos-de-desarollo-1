@@ -164,8 +164,6 @@ namespace func
             string n2 = "";
             for(int i = 0; i <= n1; i++)
             {
-                if (i == 0)
-                    n2 = "";
                 n2 += "," + i;
             }
             return n2;
@@ -194,6 +192,14 @@ namespace func
                 n3 = n2 + Conca(n2 + i , n3 + i);
             }
             return n3;
+        }
+        public static int Repeticion(int n1, int n2)
+        {
+            for (int i = 1; i < n2; i++)
+            {
+                Console.WriteLine(n1);
+            }
+            return n1;
         }
     }
 }

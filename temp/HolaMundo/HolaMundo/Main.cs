@@ -4,8 +4,8 @@
     {
         public static void Main(string[] args)
         {
-            string r1;
-            r1 = func.Functions.SerieConca(7);
+            int r1;
+            r1 = func.Functions.Repeticion(5,5);
             System.Console.WriteLine(r1);
         }
     }
