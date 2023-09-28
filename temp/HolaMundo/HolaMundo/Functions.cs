@@ -159,6 +159,17 @@ namespace func
         {
             return n1 + "," + n2;
         }
+        public static string SerieConca(int n1)
+        {
+            string n2 = "";
+            for(int i = 0; i <= n1; i++)
+            {
+                if (i == 0)
+                    n2 = "";
+                n2 += "," + i;
+            }
+            return n2;
+        }
         public static string Serie1str(int n1)
         {
             string n2 = "";
@@ -175,10 +186,13 @@ namespace func
         public static string ConcaSerie(int n1)
         {
             string n2 = "";
-            string n3 = "";
-            if (n1 <= 0)
-                return n2;
-            n3 = Conca(n2, n3);
+            string n3= "";
+            for( int i = 0; i<= n1; i++)
+            {
+                if (i >= n1)
+                    return n2;
+                n3 = n2 + Conca(n2 + i , n3 + i);
+            }
             return n3;
         }
     }
