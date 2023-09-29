@@ -120,7 +120,6 @@ namespace func
                 {
                     j += 5;
                 }
-
                 else
                 {
                     j -= 2;
@@ -174,9 +173,14 @@ namespace func
             int n3 = 1;
             for(int i = 0; i <= n1; i++)
             {
+                if (i == n1 - 1)
+                {
+                    n2 += n3;
+                    return n2;
+                }
                 if (i >= n1)
                     return n2;
-                n2 += "," + n3;
+                n2 += n3 + ",";
                 n3 *= 2;
             }
             return n2;
@@ -184,7 +188,7 @@ namespace func
         public static string ConcaSerie(int n1)
         {
             string n2 = "";
-            string n3= "";
+            string n3 = "";
             for( int i = 0; i<= n1; i++)
             {
                 if (i >= n1)
@@ -201,14 +205,14 @@ namespace func
             }
             return n1;
         }
-        public void unoalcien(int n1)
+        public static int unoalcien(int n1)
         {
             for(int i = 1; i<= n1; i++)
             {
                 if ((i % 2 == 0) || (i % 3 == 0))
                     Console.WriteLine(i);
             }
-            return;
+            return n1;
         }
     }
 }
