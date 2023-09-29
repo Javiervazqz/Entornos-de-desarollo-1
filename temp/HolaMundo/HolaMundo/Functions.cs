@@ -171,7 +171,7 @@ namespace func
         {
             string n2 = "";
             int n3 = 1;
-            for(int i = 0; i <= n1; i++)
+            for(int i = 0; i <= n1; i++) // se pueden poner mas de una instrucción separada por una coma
             {
                 if (i == n1 - 1)
                 {
@@ -185,7 +185,7 @@ namespace func
             }
             return n2;
         }
-        public static string ConcaSerie(int n1)
+            public static string ConcaSerie(int n1)
         {
             string n2 = "";
             string n3 = "";
@@ -213,6 +213,37 @@ namespace func
                     Console.WriteLine(i);
             }
             return n1;
+        }
+        public static string Fibonacci(int n1)
+        {
+            string cad = "0";
+            int num1 = 0;
+            int num2 = 1;
+            int num3 = 1;
+            for (int i = 0; i <= n1 - 2; i++)
+            {
+                num1 = num2;
+                num2 = num3;
+                num3 = num1 + num2;
+                cad = cad + "," + num2;
+            }
+            return cad;
+        }
+        public static string Fibonacci2(int n1)
+        {
+            string cad = "0";
+            int n0 = 0, n2 = 1, n3 = 1;
+            while (n3 != n1)
+            {
+                if (n3 >= n1)
+                    return cad + "," + n1;
+                else
+                {
+                    n0 = n2; n2 = n3; n3 = n0 + n2;
+                    cad = cad + "," + n2;
+                }
+            }
+            return cad +  "," + n1;
         }
     }
 }
