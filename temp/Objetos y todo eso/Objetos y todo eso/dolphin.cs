@@ -15,15 +15,20 @@ namespace Objetos
         public class Dolphin
         {
             public double size;
-            public double hp;
+            private double hp = 100.0;
             public string name;
             public ColorType color;
             public double maxhp;
-            public void sethp(double hp)
+            public Dolphin(double currentHp, double maximumHp)
+            {
+                hp = currentHp;
+                maxhp = maximumHp;
+            }
+            public void SetHp(double hp)
             {
                 this.hp = hp;
             }
-            public double GetHpPercent()
+            public double GetHp()
             {
                 return ((hp / maxhp) * 100);
             }

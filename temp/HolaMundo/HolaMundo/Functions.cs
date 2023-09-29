@@ -243,7 +243,7 @@ namespace func
                     cad = cad + "," + n2;
                 }
             }
-            return cad +  "," + n1;
+            return cad + "," + n1;
         }
     }
 }

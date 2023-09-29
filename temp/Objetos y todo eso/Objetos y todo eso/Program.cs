@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Objetos
+﻿namespace Objetos
 {
     internal class Program
     {
@@ -13,14 +6,18 @@ namespace Objetos
         {
             Dolphin d1;
             Dolphin d2;
-            d1 = new Dolphin();
+            d1 = new Dolphin(100.0,800.0);
             d1.size = 10.0;
-            d1.life = 100.0;
+            d1.SetHp(100.0);
+            double l;
+            l = d1.GetHp();
             d1.name = "Jose Luis";
             d1.color = ColorType.blue;
             d2 = new Dolphin();
             d2.size = 20.0;
-            d2.life = 1000.0;
+            d2.SetHp(1000.0);
+            double m;
+            m = d2.GetHp();
             d2.name = "Paco";
             d2.color = ColorType.red;
         }
