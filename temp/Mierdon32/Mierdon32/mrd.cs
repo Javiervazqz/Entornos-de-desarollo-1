@@ -22,5 +22,10 @@ namespace Mierdon32
             }
             return j;
         }
+
+        internal static int FuncLista4(List<double> num)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
