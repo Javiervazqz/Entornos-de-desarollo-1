@@ -4,8 +4,8 @@
     {
         public static void Main(string[] args)
         {
-            string r1;
-            r1 = func.Functions.Fibonacci2(20);
+            int r1;
+            r1 = func.Functions.RecSum(7);
             System.Console.WriteLine(r1);
         }
     }

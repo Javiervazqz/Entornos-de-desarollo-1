@@ -245,5 +245,13 @@ namespace func
             }
             return cad + "," + n1;
         }
+        public static int RecSum(int n1)
+        {
+            for (int i = 0; i < n1; i++)
+            {
+                Console.WriteLine(RecSum(n1-i));
+            }
+            return n1;
+        }
     }
 }
