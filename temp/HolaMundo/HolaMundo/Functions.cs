@@ -189,7 +189,7 @@ namespace func
         {
             string n2 = "";
             string n3 = "";
-            for( int i = 0; i<= n1; i++)
+            for (int i = 0; i <= n1; i++)
             {
                 if (i >= n1)
                     return n2;
