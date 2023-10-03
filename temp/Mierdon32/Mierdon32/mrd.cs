@@ -39,5 +39,14 @@ namespace Mierdon32
             }
             return j;
         }
+        public static bool SearchInt(List<int> l, int n1)
+        {
+            for (int i = 0; i < l.Count; i++)
+            {
+                if (l[i] == n1)
+                    return true;
+            }
+            return false;
+        }
     }
 }

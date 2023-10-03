@@ -10,7 +10,7 @@ namespace Mierdon32
             l.Add(4);
             l.Add(5);
             l.Add(6);
-            int r = mrd.FuncLista1(l);
+            //int r = mrd.FuncLista1(l);
             //Console.WriteLine(r);
 
 
@@ -19,14 +19,17 @@ namespace Mierdon32
                 num.Add(i);
             int s = mrd.FuncLista2(num);
             //Console.WriteLine(s);
-            s = mrd.FuncLista2(num);
+            //s = mrd.FuncLista2(num);
 
             Obamium obama = new Obamium();
             obama.name = "obama";
             obama.age = "32";
             obama.DNI = "043555095W";
 
-            int r1 = mrd.PrimosHasta(10);
+            //int r1 = mrd.PrimosHasta(38);
+            //Console.WriteLine(r1);
+
+            bool r1 = mrd.SearchInt(l,5);
             Console.WriteLine(r1);
         }
     }
