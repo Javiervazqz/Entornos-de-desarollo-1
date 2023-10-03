@@ -22,10 +22,22 @@ namespace Mierdon32
             }
             return j;
         }
-
-        internal static int FuncLista4(List<double> num)
+        public static bool Prime(int n1)
         {
-            throw new NotImplementedException();
+            for (int i = 2; i < n1; i++)
+                if ((n1 % i) == 0)
+                    return false;
+            return true;
+        }
+        public static int PrimosHasta(int n1)
+        {
+            int j = 0;
+            for (int i = 1; i <= n1; i++)
+            {
+                if (Prime(i))
+                    j++;
+            }
+            return j;
         }
     }
 }
