@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -47,6 +48,53 @@ namespace Mierdon32
                     return true;
             }
             return false;
+        }
+        /// <summary>
+        ///funcionq ue devuelve el numero mayor de una lista de enteros
+        /// </summary>
+        /// <param name="l">lista de enteros</param>
+        /// <returns>numero mas alto de la lista, si l es null devuelve 0</returns>
+        public static int GreaterList(List<int> l)
+        {
+            if (l == null || l.Count == 0)
+                return int.MinValue;
+            int k = l[0];
+            for (int i = 1; i < l.Count; i++)
+            {
+                if (l[i] > k)
+                    k = l[i];
+            }
+            return k;
+        }
+        public static int GreaterPosition(List<int> l)
+        {
+            if (l == null || l.Count == 0)
+                return int.MinValue;
+            int k = l[0];
+            int index = 0;
+            for (int i = 1; i < l.Count; i++)
+            {
+                if (l[i] > k)
+                {
+                    k = l[i];
+                    index = i;
+                }
+            }
+            return index;
+        }
+        public static bool Ascendant(List<int> l)
+        {
+            if (l == null || l.Count == 0)
+                return false;
+            int k = l[0];
+            for (int i = 1; i < l.Count; i++)
+            {
+                if (l[i] > k)
+                    k = l[i];
+                if (
+                    return false;
+            }
+            return true;
         }
     }
 }
