@@ -253,5 +253,39 @@ namespace func
             }
             return n1;
         }
+        public static void Triangle()
+        {
+            int n1 = Convert.ToInt32(Console.ReadLine());
+            int ancho = Convert.ToInt32(Console.ReadLine());
+            int alto = ancho;
+            Console.Clear();
+            for (int fila = 0; fila < alto; fila++)
+            {
+                for (int columna = 0; columna < ancho; columna++)
+                {
+                    Console.Write(n1);
+                }
+
+                Console.WriteLine();
+                ancho--;
+            }
+        }
+        public static void Triangle2()
+        {
+            int x = Convert.ToInt32(Console.ReadLine());
+            int ancho = Convert.ToInt32(Console.ReadLine());
+            int alto = ancho;
+            Console.Clear();
+            for (int fila = 0; fila < alto; fila++)
+            {
+                for (int columna = 0; columna < ancho; columna++)
+                {
+                    Console.Write(x);
+                }
+
+                Console.WriteLine();
+                ancho--;
+            }
+        }
     }
 }

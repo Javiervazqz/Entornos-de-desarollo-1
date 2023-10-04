@@ -4,9 +4,8 @@
     {
         public static void Main(string[] args)
         {
-            int r1;
-            r1 = func.Functions.RecSum(7);
-            System.Console.WriteLine(r1);
+            func.Functions.Triangle();
+            System.Console.WriteLine();
         }
     }
 }
