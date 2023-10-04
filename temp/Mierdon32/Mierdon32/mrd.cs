@@ -96,5 +96,17 @@ namespace Mierdon32
             }
             return true;
         }
+        public static int Yeye(List<int> l)
+        {
+            if (l == null || l.Count == 0)
+                return int.MinValue;
+            int k = l[0];
+            for (int i = 1; i < l.Count; i++)
+            {
+                if (l[i] > k)
+                    k = l[i];
+            }
+            return k;
+        }
     }
 }
