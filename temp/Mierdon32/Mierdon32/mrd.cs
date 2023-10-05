@@ -91,7 +91,7 @@ namespace Mierdon32
             {
                 if (l[i] > k)
                     k = l[i];
-                if (
+                else
                     return false;
             }
             return true;
