@@ -96,38 +96,66 @@ namespace Mierdon32
             }
             return true;
         }
-        public static bool Contains0(int n1)
+        //public static bool Contains0(int n1)
+        //{
+        //    int min = 0;
+        //    int max = a.Length - 1;
+        //    int mid = 0;
+        //    while (min <= max)
+        //    {
+        //        mid = (min + max) / 2;
+        //        if (a[mid] == n1)
+        //            return true;
+        //        if (n1 >= a[mid])
+        //        {
+        //            min = mid + 1;
+        //        }
+        //        else
+        //        {
+        //            max = mid - 1;
+        //        }
+        //    }
+        //    return false;
+        //}
+        //public static bool Contains(int n1)
+        //{
+        //    int min = 0;
+        //    int max = a.Length - 1;
+        //    int mid = 0;
+        //    while (min <= max)
+        //    {
+        //        mid = (min + max) / 2;
+        //        if (a[mid] == n1)
+        //            return true;
+        //        if (n1 >= a[mid])
+        //        {
+        //            min = mid + 1;
+        //        }
+        //        else
+        //        {
+        //            max = mid - 1;
+        //        }
+        //    }
+        //    return false;
+        //}
+        public static bool Contains(int num)
         {
-            int min = 0;
-            int max = a.Length - 1;
-            int mid = 0;
-            while (min <= max)
+            int n2 = 1;
+            int n3 = 1;
+            int[] a = new int[num];
+            for (int i = 0; i < num; i++)
             {
-                mid = (min + max) / 2;
-                if (a[mid] == n1)
-                    return true;
-                if (n1 >= a[mid])
-                {
-                    min = mid + 1;
-                }
-                else
-                {
-                    max = mid - 1;
-                }
+                a[i] = i;
             }
-            return false;
-        }
-        public static bool Contains(int n1)
-        {
             int min = 0;
             int max = a.Length - 1;
             int mid = 0;
             while (min <= max)
             {
                 mid = (min + max) / 2;
-                if (a[mid] == n1)
+                if (a[mid] == num)
                     return true;
-                if (n1 >= a[mid])
+                if (num >= a[mid])
                 {
                     min = mid + 1;
                 }
