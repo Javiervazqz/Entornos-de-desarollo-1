@@ -7,11 +7,11 @@ namespace Mierdon32
     {
         static void Main(string[] args)
         {
-            List<int> l = new List<int>();
-            l.Add(4);
-            l.Add(8);
-            l.Add(8);
-            l.Add(8);
+            //List<int> l = new List<int>();
+            //l.Add(1);
+            //l.Add(2);
+            //l.Add(5);
+            //l.Add(8);
             //double r = mrd.MediaArit(l);
             //Console.WriteLine(r);
 
@@ -44,12 +44,13 @@ namespace Mierdon32
             //    bool r1 = mrd.Contains(200);
             //    Console.WriteLine(r1);
             //}
-            //double[] a = new double[0];
-            //a[0] = 2.0;
-            //a[1] = 13.0;
-            //a[2] = 3.0;
-            //a[3] = 7.0;
-            int r1 = mrd.GreaterRep(l);
+            int n = 4;
+            int[] a = new int[n];
+            a[0] = 2;
+            a[1] = 13;
+            a[2] = 3;
+            a[3] = 7;
+            int[] r1 = mrd.Reves1(a);
             Console.WriteLine(r1);
         }
     }

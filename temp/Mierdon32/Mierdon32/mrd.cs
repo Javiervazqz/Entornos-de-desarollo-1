@@ -175,14 +175,6 @@ namespace Mierdon32
             }
             return k/a.Length;
         }
-
-
-
-
-
-
-
-
         public static double MediaUmbral(double[] a)
         {
             if (a == null || a.Length == 0)
@@ -200,18 +192,7 @@ namespace Mierdon32
             }
             return res/count;
         }
-
-
-
-
-
-
-
-
-
-
-
-        public static int GreaterRep0(List <int> l)
+        public static int GreaterRep0(List<int> l)
         {
             if (l == null || l.Count == 0)
                 return -1;
@@ -224,25 +205,40 @@ namespace Mierdon32
             }
             return count;
         }
+        public static List<int> Reves(List<int> l)
+        {
+            if (l == null || l.Count == 0)
+                return null;
+            List<int> result = new List<int>();
+            for (int i = l.Count-1; i >= 0; i--)
+            {
+                result.Add(l[i]);
+            }
+            return result;
+        }
+        //Que le paso una lista de enteros y los imprime por pantalla
+        //Que le paso un array de enteros y me lo devuelve al reves
+        //PENSAR SOLO -> le paso un array de enteros y un entero, añade ese entero al array
 
-
-
-
-
-
-
-
-
-
-
-
-        public static int GreaterRep1(List <int> l)
+        public static int Reves(List<int> l)
         {
             if (l == null || l.Count == 0)
                 return -1;
-            string cad = "";
+            int n = 0;
+            for (int i = 0; i <= l.Count - 1; i++)
+            {
+                n = l[i];
+                Console.WriteLine(n);
+            }
+            return n;
+        }
+
+        public static int Reves1(int[] a)
+        {
+            int n = a.Length;
+            int[] result = new int[n];
 
         }
-            
+
     }
 }
