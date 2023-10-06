@@ -353,5 +353,74 @@ namespace func
                 g++;
             } while(g <= n2);
         }
+        public static void Digitos()
+        {
+            int n1 = Convert.ToInt32((Console.ReadLine()));
+            int d = 0;
+            Console.Clear();
+            if (n1 < 0)
+            {
+                Console.WriteLine("Es un número negativo");
+                n1 = -n1;
+            }
+            while (n1 > 0)
+            {
+                n1 /= 10;
+                d++;
+            }
+            if (d == 0)
+            {
+                d = 1;
+            }
+            Console.WriteLine(d);
+        }
+        public static void Multiplicar()
+        {
+            int n1 = Convert.ToInt32((Console.ReadLine()));
+            int n2 = Convert.ToInt32((Console.ReadLine()));
+            for (int i = 1; i <= 10; i++)
+            {
+                int res = n1 * i;
+                Console.WriteLine(n1 + "x" + i + " = " + res);
+            }
+            Console.WriteLine();
+            for (int i = 1; i <= 10; i++)
+            {
+                int res = n2 * i;
+                Console.WriteLine(n2 + "x" + i + " = " + res);
+            }
+        }
+        public static void Multiplo()
+        {
+            int n1 = Convert.ToInt32(Console.ReadLine());
+            for (int i = 1; i <= n1; i++)
+            {
+                if (i % 5 == 0 && i % 3 == 0)
+                    Console.Write(i + " ");
+            }
+        }
+        public static void Password()
+        {
+            int pass0 = Convert.ToInt32(Console.ReadLine());
+            string name0 = Console.ReadLine();
+            Console.Clear();
+            for (int tried = 3; tried <= 3; tried--)
+            {
+                int pass1 = Convert.ToInt32(Console.ReadLine());
+                string name1 = Console.ReadLine();
+                if (name1 == name0)
+                {
+                    if (pass1 == pass0)
+                    {
+                        Console.WriteLine("Acceso garantizado");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Incorrecto");
+                    }
+                }
+                Console.WriteLine("Incorrecto");
+            }
+        }
     }
 }

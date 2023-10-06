@@ -8,7 +8,7 @@ namespace aMain
         {
             //func.Functions.Cuadrado();
             //System.Console.WriteLine();
-            func.Functions.TripleRango();
+            func.Functions.Password();
             Console.WriteLine();
         }
     }
