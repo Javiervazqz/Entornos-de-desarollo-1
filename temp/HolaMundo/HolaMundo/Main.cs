@@ -4,7 +4,7 @@
     {
         public static void Main(string[] args)
         {
-            func.Functions.Triangle();
+            func.Functions.Cuadrado();
             System.Console.WriteLine();
         }
     }

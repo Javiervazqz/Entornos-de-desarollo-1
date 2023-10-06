@@ -287,5 +287,18 @@ namespace func
                 ancho--;
             }
         }
+        public static void Cuadrado()
+        {
+            int n1 = Convert.ToInt32(Console.ReadLine());
+            int n2 = Convert.ToInt32(Console.ReadLine());
+            for (int i = 0; i < n2; i++)
+            {
+                for (int j = 0; j < n2; j++)
+                {
+                    Console.Write(n1);
+                }
+                Console.WriteLine();
+            }
+        }
     }
 }
