@@ -138,33 +138,38 @@ namespace Mierdon32
         //    }
         //    return false;
         //}
-        public static bool Contains(int num)
+        //public static bool Contains(int num)
+        //{
+        //    int n2 = 1;
+        //    int n3 = 1;
+        //    int[] a = new int[num];
+        //    for (int i = 0; i < num; i++)
+        //    {
+        //        a[i] = i;
+        //    }
+        //    int min = 0;
+        //    int max = a.Length - 1;
+        //    int mid = 0;
+        //    while (min <= max)
+        //    {
+        //        mid = (min + max) / 2;
+        //        if (a[mid] == num)
+        //            return true;
+        //        if (num >= a[mid])
+        //        {
+        //            min = mid + 1;
+        //        }
+        //        else
+        //        {
+        //            max = mid - 1;
+        //        }
+        //    }
+        //    return false;
+        //}
+        public static double MediaArit(List<int> l)
         {
-            int n2 = 1;
-            int n3 = 1;
-            int[] a = new int[num];
-            for (int i = 0; i < num; i++)
-            {
-                a[i] = i;
-            }
-            int min = 0;
-            int max = a.Length - 1;
-            int mid = 0;
-            while (min <= max)
-            {
-                mid = (min + max) / 2;
-                if (a[mid] == num)
-                    return true;
-                if (num >= a[mid])
-                {
-                    min = mid + 1;
-                }
-                else
-                {
-                    max = mid - 1;
-                }
-            }
-            return false;
+            int mid = (l[0] + l[1] + l[2] + l[3]) / l.Count;
+            return mid;
         }
     }
 }

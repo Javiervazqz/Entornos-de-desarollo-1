@@ -300,5 +300,58 @@ namespace func
                 Console.WriteLine();
             }
         }
+        public static void NotaAlumno(int n1)
+        {
+            switch(n1)
+            {
+                case 0:
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+                    Console.WriteLine("Suspendido");
+                    break;
+                case 5:
+                    Console.WriteLine("Aproado");
+                    break;
+                case 6:
+                    Console.WriteLine("Bien");
+                    break;
+                case 7:
+                case 8:
+                    Console.WriteLine("Notable");
+                    break;
+                case 9:
+                    Console.WriteLine("Sobresaliente");
+                    break;
+                default:
+                    Console.WriteLine("Matrícula de honor");
+                    break;
+            }
+        }
+        public static void TripleRango()
+        {
+            int n1 = Convert.ToInt32((Console.ReadLine()));
+            int n2 = Convert.ToInt32((Console.ReadLine()));
+            Console.Clear();
+            int k = n1;
+            for (int i = n1; i <= n2; i++)
+            {
+                Console.Write(i + " ");
+            }
+            Console.WriteLine();
+            while (k <= n2)
+            {
+                Console.Write(k + " ");
+                k++;
+            }
+            Console.WriteLine();
+            int g = n1;
+            do
+            {
+                Console.Write(g + " ");
+                g++;
+            } while(g <= n2);
+        }
     }
 }
