@@ -239,6 +239,6 @@ namespace Mierdon32
             int[] result = new int[n];
 
         }
-
+        return result;
     }
 }
