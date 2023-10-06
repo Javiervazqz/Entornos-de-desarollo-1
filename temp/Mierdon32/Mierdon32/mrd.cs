@@ -166,10 +166,83 @@ namespace Mierdon32
         //    }
         //    return false;
         //}
-        public static double MediaArit(List<int> l)
+        public static double MediaArit(double[] a)
         {
-            int mid = (l[0] + l[1] + l[2] + l[3]) / l.Count;
-            return mid;
+            double k = 0.0;
+            for (int i = 0; i < a.Length; i++)
+            {
+                k += a[i];
+            }
+            return k/a.Length;
         }
+
+
+
+
+
+
+
+
+        public static double MediaUmbral(double[] a)
+        {
+            if (a == null || a.Length == 0)
+                return -1;
+            double res = 0.0;
+            double umbral = 5.0;
+            double count = 0.0;
+            for (int i = 0; i < a.Length; i++)
+            {
+                if (a[i] >= umbral)
+                {
+                    res += a[i];
+                    count++;
+                }
+            }
+            return res/count;
+        }
+
+
+
+
+
+
+
+
+
+
+
+        public static int GreaterRep0(List <int> l)
+        {
+            if (l == null || l.Count == 0)
+                return -1;
+            int count = 0;
+            int n = GreaterList(l);
+            for (int i = 0; i < l.Count; i++)
+            {
+                if (l[i] == n)
+                    count++;
+            }
+            return count;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        public static int GreaterRep1(List <int> l)
+        {
+            if (l == null || l.Count == 0)
+                return -1;
+            string cad = "";
+
+        }
+            
     }
 }

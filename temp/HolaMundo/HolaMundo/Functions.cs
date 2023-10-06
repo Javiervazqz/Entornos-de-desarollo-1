@@ -404,7 +404,8 @@ namespace func
             int pass0 = Convert.ToInt32(Console.ReadLine());
             string name0 = Console.ReadLine();
             Console.Clear();
-            for (int tried = 3; tried <= 3; tried--)
+            int tried = 3;
+            while ()
             {
                 int pass1 = Convert.ToInt32(Console.ReadLine());
                 string name1 = Console.ReadLine();
@@ -417,10 +418,15 @@ namespace func
                     else
                     {
                         Console.WriteLine("Incorrecto");
+                        Console.WriteLine("Quedan " + tried + " intentos");
+                        tried--;
                     }
                 }
                 Console.WriteLine("Incorrecto");
+                Console.WriteLine("Quedan " + tried + " intentos");
+                tried--;
             }
         }
+
     }
 }
