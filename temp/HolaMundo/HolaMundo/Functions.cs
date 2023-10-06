@@ -231,7 +231,7 @@ namespace func
         }
         public static string Fibonacci2(int n1)
         {
-            string cad = "0";
+            string cad = "0,1";
             int n0 = 0, n2 = 1, n3 = 1;
             while (n3 != n1)
             {
