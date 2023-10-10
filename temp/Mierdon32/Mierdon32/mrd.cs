@@ -220,25 +220,46 @@ namespace Mierdon32
         //Que le paso un array de enteros y me lo devuelve al reves
         //PENSAR SOLO -> le paso un array de enteros y un entero, añade ese entero al array
 
-        public static int Reves(List<int> l)
+        public static void Imp(List<int> l)
         {
             if (l == null || l.Count == 0)
-                return -1;
-            int n = 0;
+                return;
             for (int i = 0; i <= l.Count - 1; i++)
             {
-                n = l[i];
-                Console.WriteLine(n);
+                Console.Write(l[i] + ", ");
             }
-            return n;
+            return;
         }
 
-        public static int Reves1(int[] a)
+        public static int[] ReverseArray(int[] a)
         {
+            if (a == null)
+                return null;
             int n = a.Length;
             int[] result = new int[n];
-
+            for (int i = 0; i <= n - 1; i++)
+            {
+                result[i] = a[n - 1 - i];
+            }
+            return result;
         }
-        return result;
+        public static int[] Sort(int[] a)
+        {
+            if (a == null || a.Length == 0)
+                return null;
+            int temp = 0; int n1 = 0; int n2 = 0;
+            for (int i = 0; i <= a.Length - 1; i++)
+            {
+                if (i == a.Length - 1)
+                    return a;
+                if (a[i] > a[i + 1])
+                {
+                    temp = a[i];
+                    a[i] = a[i + 1];
+                    a[i + 1] = temp;
+                }
+            }
+            return a;
+        }
     }
 }
