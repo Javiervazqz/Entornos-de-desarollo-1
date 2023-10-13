@@ -261,5 +261,27 @@ namespace Mierdon32
             }
             return a;
         }
+        public static void RemoveElement(List<int> l, int pos)
+        {
+            if (l == null || l.Count == 0)
+                return;
+            l.RemoveAt(pos);
+        }
+        public static void RemoveElement2(List<int> l, int value)
+        {
+            if (l == null || l.Count == 0)
+                return;
+            else
+            {
+                for (int i = 0; i < l.Count; i++)
+                {
+                    if (l[i] == value)
+                    {
+                        l.RemoveAt(i--);
+                    }
+                }
+            }
+        }
+        //break lo que hace es salirse del bucle en el que esta puesto, como si fuera un medio return
     }
 }
