@@ -252,7 +252,7 @@ namespace Mierdon32
             {
                 if (i == a.Length - 1)
                     return a;
-                if (a[i] > a[i + 1])
+                if (a[i] >= a[i + 1])
                 {
                     temp = a[i];
                     a[i] = a[i + 1];
