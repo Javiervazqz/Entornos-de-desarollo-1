@@ -7,14 +7,19 @@ namespace Mierdon32
     {
         static void Main(string[] args)
         {
-            List<int> l = new List<int>();
-            l.Add(0);
-            l.Add(8);
-            l.Add(8);
-            l.Add(8);
+            List <int> l = new List<int>();
             l.Add(4);
-            mrd.RemoveElement2(l, 8);
-            Console.WriteLine();
+            l.Add(8);
+            l.Add(8);
+            l.Add(8);
+            l.Add(1);
+            List<int> values = new List<int>();
+            values.Add(8);
+            values.Add(4);
+            values.Add(2);
+            values.Add(3);
+            mrd.RemoveValues(l, values);
+            //Console.WriteLine();
 
 
             //List<double> num = new List<double>();
@@ -56,6 +61,7 @@ namespace Mierdon32
             //a[7] = 21;
             //a[8] = 18;
             //a[9] = 44;
+            //mrd.RemoveElement0array(a, 5);
             //int[] r1 = mrd.Sort(a);
             //for (int i = 0; i <= a.Length - 1; i++)
             //{

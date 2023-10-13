@@ -283,5 +283,79 @@ namespace Mierdon32
             }
         }
         //break lo que hace es salirse del bucle en el que esta puesto, como si fuera un medio return
+        public static void RemoveElement0array(int[] a, int value) // MAL
+        {
+            if (a == null || a.Length == 0)
+                return;
+            else
+            {
+                for (int i = 0; i < a.Length; i++)
+                {
+                    if (a[i] == value)
+                    {
+                        int[] b = new int[a.Length - 1];
+                        for (int j = 0; i < b.Length - 1; j++)
+                        {
+                            if (a[i] == value)
+                                i++;
+                            b[j] = a[i];
+                        }
+                    }
+                }
+            }
+        }
+        public static int CountElements(int[] a, int value)
+        {
+            int c = 0;
+            for (int i = 0; i < a.Length; i++)
+            {
+                if (a[i] == value)
+                {
+                    c++;
+                }
+            }
+            return c;
+        }
+        public static void RemoveElementArray(int[] a, int value) // BIEN
+        {
+            if (a == null || a.Length == 0)
+                return;
+            int n = CountElements(a, value);
+            int[] result = new int [a.Length - n];
+            int j = 0;
+            for(int i = 0; i < a.Length; i++)
+            {
+                if (a[i] != value)
+                {
+                    result[j++] = a[i];
+                }
+            }
+        }
+        public static void RemoveValues(List<int> l, List<int> values)
+        {
+            if (l == null || l.Count == 0 || values == null || values.Count == 0)
+                return;
+            for (int j = 0; j < values.Count; j++)
+            {
+                for (int i = 0; i < l.Count; i++)
+                {
+                    if (l[i] == values[j])
+                    {
+                        l.RemoveAt(i--);
+                        break;
+                    }
+                }
+            }
+        }
+        public static void RemoveValuesOptimized(List<int> l, List<int> values)
+        {
+            if (l == null || l.Count == 0 || values == null || values.Count == 0)
+                return;
+            for (int i = 0; i < l.Count; i++)
+            {
+                if (values.Contains(l[i]))
+                    l.RemoveAt(i--);
+            }
+        }
     }
 }
