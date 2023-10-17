@@ -2,16 +2,16 @@
 
 namespace Objetos
 {
+    public enum ColorType
+    {
+        blue,
+        white,
+        black,
+        red,
+        gold
+    }
     internal class Class1
     {
-        public enum ColorType
-        {
-            blue,
-            white,
-            black,
-            red,
-            gold
-        }
         public class Dolphin
         {
             public double size;

@@ -8,10 +8,15 @@ namespace MierdonArtista
 {
     internal class utils
     {
-        private static Random r = new Random();
+        public static Random r = new Random();
         public static double GetRandom()
         {
             return r.NextDouble();
+        }
+        public static double GetRandomized(double min, double max)
+        {
+            double res = GetRandom() * (max - min) - min;
+            return res;
         }
     }
 }
