@@ -4,20 +4,9 @@ namespace MierdonArtista
 {
     internal class Program
     {
-        public class Character
-        {
-            public double x;
-            public double y;
-            public double velocity = 0.005;
-            public double red = utils.GetRandom();
-            public double green = utils.GetRandom();
-            public double blue = utils.GetRandom();
-            public double alpha;
-        }
 
         public class MyGame : UDK.IGameDelegate
         {
-            List<Character> l;
             public void OnLoad(GameDelegateEvent gameEvent)
             {
                 l = new List<Character>();
