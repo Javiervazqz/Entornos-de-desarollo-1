@@ -10,16 +10,9 @@ namespace MierdonArtista
 
     public class world
     {
-        double width;
-        double height;
+        double ww;
+        double wh;
         private List<Character> l;
-        public void Draw(ICanvas canvas)
-        {
-            canvas.Clear(0, 0, 0, 0);
-            canvas.Camera.SetRectangle(0, 0, 10, 10);
-            canvas.FillShader.SetColor(1, 0, 1, 1);
-            canvas.DrawRectangle(0, 1, 2, 2);
-        }
         public List<Character> CreatePJ()
         {
             l = new List<Character>();
@@ -30,10 +23,21 @@ namespace MierdonArtista
                 p.red = utils.GetRandomized(0.0, 1.0);
                 p.green = utils.GetRandomized(0.0, 1.0);
                 p.blue = utils.GetRandomized(0.0, 1.0);
-                p.alpha= 1.0;
-    }
+                p.alpha = 1.0;
+            }
             return l;
         }
+        public void Draw(ICanvas canvas)
+        {
+            canvas.Clear(0, 0, 0, 0);
+            canvas.Camera.SetRectangle(0, 0, 10, 10);
+            canvas.FillShader.SetColor(1, 0, 1, 1);
+            canvas.DrawRectangle(0, 1, 2, 2);
+            canvas.Camera.SetRectangle(0, 0, 1000, 1000);
+            canvas.FillShader.SetColor(1, 1, 1, 1);
+            canvas.DrawRectangle(2, 3, 5, 5);
+        }
+        
         public int GetCharacterCount()
         {
             return l.Count;
@@ -61,6 +65,10 @@ namespace MierdonArtista
             p.x = p.x - utils.GetRandomized(-0.01, 0.01);
             p.y = p.y + utils.GetRandomized(-0.01, 0.01);
             p.y = p.y - utils.GetRandomized(-0.01, 0.01);
+        }
+        public bool OffLimits(Character p, )
+        {
+
         }
     }
 }

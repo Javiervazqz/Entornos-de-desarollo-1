@@ -7,10 +7,9 @@ using static MierdonArtista.Game;
 
 namespace MierdonArtista
 {
-    public void Main()
+    public void Main(string[] args)
     {
         MyGame game = new MyGame();
         UDK.Game.Launch(game);
     }
-   
 }
