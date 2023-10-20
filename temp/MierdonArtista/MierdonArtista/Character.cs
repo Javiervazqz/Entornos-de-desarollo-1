@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace MierdonArtista
 {
-    internal class Character
+    public class Character
     {
-        public class Character0
-        {
             public double x;
             public double y;
             public double velocity = 0.005;
@@ -17,6 +15,5 @@ namespace MierdonArtista
             public double green = utils.GetRandom();
             public double blue = utils.GetRandom();
             public double alpha;
-        }
     }
 }
