@@ -239,7 +239,9 @@ namespace func
                     return cad + "," + n1;
                 else
                 {
-                    n0 = n2; n2 = n3; n3 = n0 + n2;
+                    n0 = n2; 
+                    n2 = n3; 
+                    n3 = n0 + n2;
                     cad = cad + "," + n2;
                 }
             }
@@ -401,19 +403,24 @@ namespace func
         }
         public static void Password()
         {
+            Console.Write("Escribe la contraseña: ");
             int pass0 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Escribe el usuario: ");
             string name0 = Console.ReadLine();
             Console.Clear();
             int tried = 3;
-            while ()
+            for(int i = 0; )
             {
+                Console.Write("Escribe la contraseña: ");
                 int pass1 = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Escribe el usuario: ");
                 string name1 = Console.ReadLine();
                 if (name1 == name0)
                 {
                     if (pass1 == pass0)
                     {
                         Console.WriteLine("Acceso garantizado");
+                        return;
                     }
                     else
                     {
@@ -422,9 +429,6 @@ namespace func
                         tried--;
                     }
                 }
-                Console.WriteLine("Incorrecto");
-                Console.WriteLine("Quedan " + tried + " intentos");
-                tried--;
             }
         }
 
