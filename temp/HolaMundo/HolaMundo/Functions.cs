@@ -314,7 +314,7 @@ namespace func
                     Console.WriteLine("Suspendido");
                     break;
                 case 5:
-                    Console.WriteLine("Aproado");
+                    Console.WriteLine("Aprobao");
                     break;
                 case 6:
                     Console.WriteLine("Bien");
@@ -409,7 +409,7 @@ namespace func
             string name0 = Console.ReadLine();
             Console.Clear();
             int tried = 3;
-            for(int i = 0; )
+            for(int i = 1; i <= 3; i++)
             {
                 Console.Write("Escribe la contraseña: ");
                 int pass1 = Convert.ToInt32(Console.ReadLine());
