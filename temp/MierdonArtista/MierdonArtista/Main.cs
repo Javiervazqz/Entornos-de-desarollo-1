@@ -7,9 +7,12 @@ using static MierdonArtista.Game;
 
 namespace MierdonArtista
 {
-    public void Main(string[] args)
+    internal class Program
     {
-        MyGame game = new MyGame();
-        UDK.Game.Launch(game);
+        static void Mein()
+        {
+            MyGame game = new MyGame();
+            UDK.Game.Launch(game);
+        }
     }
 }

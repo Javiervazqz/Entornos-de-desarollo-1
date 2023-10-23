@@ -18,7 +18,7 @@ namespace MierdonArtista
             l = new List<Character>();
             for (int i = 0; i < 200; i++)
             {
-                Character p;
+                Character p = new Character();
                 l.Add(p);
                 p.red = utils.GetRandomized(0.0, 1.0);
                 p.green = utils.GetRandomized(0.0, 1.0);
@@ -26,6 +26,15 @@ namespace MierdonArtista
                 p.alpha = 1.0;
             }
             return l;
+        }
+        public void CreateChar()
+        {
+            Character pj1 = new Character();
+            pj1.red = utils.GetRandomized(-0.01, 0.01);
+            pj1.blue = utils.GetRandomized(-0.01, 0.01);
+            pj1.green = utils.GetRandomized(-0.01, 0.01);
+            pj1.alpha = 1.0;
+
         }
         public void Draw(ICanvas canvas)
         {
@@ -66,9 +75,9 @@ namespace MierdonArtista
             p.y = p.y + utils.GetRandomized(-0.01, 0.01);
             p.y = p.y - utils.GetRandomized(-0.01, 0.01);
         }
-        public bool OffLimits(Character p, )
-        {
+        //public bool OffLimits(Character p, world worldr)
+        //{
 
-        }
+        //}
     }
 }
