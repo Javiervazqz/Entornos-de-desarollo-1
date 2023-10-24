@@ -1,25 +1,30 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Classes
 {
-    public class CM
+    public enum Estado
     {
-        enum state
-        {
             esperando,
             procesando_moneda,
             retirando_producto,
             devolviendo_cambio
+    }
+    public class CM
+    {
+        private Estado state;
+        public void CoffeeMachine()
+        {
+            state = Estado.esperando;
         }
-        private state;
-        public void GetState()
+        public Estado GetState()
         {
             return state;
+        }
+        public void ChangeToNextState()
+        {
+            if (--state == Estado.retirando_producto)
+                state = Estado.esperando;
+            ++state;
         }
     }
 }
