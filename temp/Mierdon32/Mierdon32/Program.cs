@@ -8,13 +8,13 @@ namespace Mierdon32
         static void Main(string[] args)
         {
             List <int> l = new List<int>();
-            l.Add(4);
+            l.Add(-2);
             l.Add(8);
+            l.Add(-1);
             l.Add(8);
-            l.Add(8);
-            l.Add(1);
-            mrd.GreaterThanZero(l);
-            //Console.WriteLine();
+            l.Add(-1);
+            string r1 = mrd.LowerThanZeroPos(l);
+            Console.WriteLine(r1);
 
 
             //List<double> num = new List<double>();

@@ -360,12 +360,24 @@ namespace Mierdon32
         public static int GreaterThanZero(List<int> l)
         {
             int count = 0;
-            for (int i = 0; i <= l.Count; i++)
+            for (int i = 0; i <= l.Count-1; i++)
             {
                 if (l[i] > 0)
                     count++;
             }
             return count;
+        }
+        public static string LowerThanZeroPos(List<int> l)
+        {
+            string cad = "";
+            for(int i = 0; i <= l.Count - 1; i++)
+            {
+                if (l[i] < 0)
+                {
+                    cad = cad + ", " + i + ", ";
+                }
+            }
+            return cad;
         }
     }
 }
