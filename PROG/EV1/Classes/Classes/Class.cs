@@ -13,6 +13,10 @@ namespace Classes
             public void SetQuantity(double value)
             {
                 quantity = value;
+                if (value < 0)
+                    quantity = 0;
+                if (quantity >= capacity)
+                    quantity = capacity;
             }
             public double GetQuantity()
             {
@@ -32,7 +36,7 @@ namespace Classes
             }
             public double GetRemain()
             {
-                return quantity - capacity;
+                return capacity - quantity;
             }
             public double AddQuanity(double value)
             {
