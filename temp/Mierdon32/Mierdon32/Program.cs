@@ -13,12 +13,7 @@ namespace Mierdon32
             l.Add(8);
             l.Add(8);
             l.Add(1);
-            List<int> values = new List<int>();
-            values.Add(8);
-            values.Add(4);
-            values.Add(2);
-            values.Add(3);
-            mrd.RemoveValues(l, values);
+            mrd.GreaterThanZero(l);
             //Console.WriteLine();
 
 
