@@ -8,7 +8,7 @@ namespace Classes
 {
     public class DominoDeck
     {
-        public class dDeck
+        public class Deck
         {
             public DominoPiece.Piece ExtractPiece(List<DominoPiece.Piece> l)
             {
