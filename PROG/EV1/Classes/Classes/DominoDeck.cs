@@ -23,6 +23,8 @@ namespace Classes
             }
             public void AddPiece(DominoPiece.Piece p, List<DominoPiece.Piece> l)
             {
+                if (p == null)
+                    return;
                 l.Add(p);
             }
             public DominoPiece.Piece GetPieceAt(int value, List<DominoPiece.Piece> l)
