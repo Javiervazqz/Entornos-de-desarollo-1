@@ -5,7 +5,7 @@ namespace Classes
     {
         static void Main(string[] args)
         {
-            Card card = new Card(4, _palo.diamantes);
+            Card card = new Card();
         }
     }
 }

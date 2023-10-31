@@ -2,47 +2,49 @@
 
 namespace Classes
 {
-    private enum _palo
-    {
-        diamantes,
-        picas,
-        corazones,
-        treboles
-    }
-    private enum _number
-    {
-        n1 = 1,
-        n2 = 2,
-        n3 = 3,
-        n4 = 4,
-        n5 = 5,
-        n6 = 6,
-        n7 = 7,
-        J = 8,
-        Q = 9,
-        K = 10,
-        A = 11
-    }
-    private enum _ColorType
-    {
-        Black = 0,
-        Red = 1
-    }
     public class Card
     {
-        public static int CardValue(_number n)
+        _palo palo;
+        _ColorType color;
+        int n = 0;
+        _figureType figure;
+        enum _palo
         {
-            return (int)n;
+            diamantes,
+            picas,
+            corazones,
+            treboles
         }
-        public bool IsValid(_number n)
+        enum _figureType
         {
-            if (n > 11 || n < 0 || n == null)
-                return (bool)false;
-            return (bool)true;
+            A = 1,
+            J = 11,
+            Q = 12,
+            K = 13,
+            JOKER = 14
         }
-        public bool IsFigure(_number n)
+        enum _ColorType
         {
-            if (n >= 7)
+            Black = 0,
+            Red = 1
+        }
+        public static int GetNumber(int n)
+        {
+            return n;
+        }
+        public static _palo GetPalo(_palo p)
+        {
+            return p;
+        }
+        public static bool IsValid(int n)
+        {
+            if (n > 14 || n < 0 || n == null)
+                return false;
+            return true;
+        }
+        public static bool IsFigure(int n)
+        {
+            if (n >= 10)
                 return true;
             return false;
         }
@@ -52,18 +54,6 @@ namespace Classes
                 return _ColorType.Black;
             return _ColorType.Red;
         }
-        public _number GetFigureType(_number n)
-        {
-            if (IsFigure())
-            {
-                if (n == 8)
-                    return _number.J;
-                if (n == 9)
-                    return _number.Q;
-                if (n == 10)
-                    return _number.K;
-                return _number.A;
-            }
-        }
+        public _figureType 
     }
 }
