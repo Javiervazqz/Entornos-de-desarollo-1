@@ -32,13 +32,6 @@ namespace Classes
                 DominoPiece.Piece p = l[value];
                 return p;
             }
-            public List<DominoPiece.Piece> Shuffle(List<DominoPiece.Piece> l)
-            {
-                for (int i = 0; i <= l.Count - 1; i++)
-                {
-                    
-                }
-            }
         }
     }
 }
