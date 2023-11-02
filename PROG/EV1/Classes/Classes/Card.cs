@@ -32,6 +32,7 @@ namespace Classes
         public static int GetNumber(int n)
         {
             return n;
+            // return IsValid() ? _number : -1; --> Si es válido, devuelve _number, si no es válido, -1
         }
         public palo GetPalo(palo p)
         {
