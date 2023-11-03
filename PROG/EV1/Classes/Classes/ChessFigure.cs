@@ -5,7 +5,8 @@ namespace Classes
     public enum ColorType
     {
         BLACK,
-        WHITE
+        WHITE,
+        UNKNOWN
     }
     public enum FigureType
     {
@@ -23,13 +24,30 @@ namespace Classes
         ColorType _color;
         FigureType _figure;
         int _movements = 0;
+        public int GetX()
+        {
+            return _x;
+        }
+        public int GetY()
+        {
+            return _y;
+        }
+        public ColorType GetColor()
+        {
+            return _color;
+        }
+        public FigureType GetFigure()
+        {
+            return _figure;
+        }
         public bool IsValid(int _figure)
         {
-            return (_figure >= 0 && _figure <= 5);
+            return (_figure >= 0 && _figure <= 5 && _color != ColorType.UNKNOWN);
         }
         internal void MoveTo(int x, int y)
         {
-
+            _x = x;
+            _y = y;
             _movements++;
         }
         public int GetMovementCount()
@@ -39,10 +57,6 @@ namespace Classes
         public bool HasBeenMoved()
         {
             return _movements > 0;
-        }
-        public ColorType GetColor()
-        {
-            return _color;
         }
     }
 }
