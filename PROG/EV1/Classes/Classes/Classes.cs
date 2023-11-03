@@ -4,7 +4,7 @@
     {
         public void Main(string[] args)
         {
-            Card card = new Card();
+            List <ChessFigure> figures = new List <ChessFigure> ();
         }
     }
 }
