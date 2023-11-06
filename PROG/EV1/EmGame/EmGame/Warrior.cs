@@ -15,6 +15,10 @@ namespace EmGame
         int hp = 100;
         double accuracy;
         int armor = 50;
-        Faction faction;
+        public Faction faction;
+    }
+    public Faction GetFaction(Warrior)
+    {
+        return 
     }
 }
