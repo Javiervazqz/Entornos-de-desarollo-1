@@ -11,16 +11,36 @@ namespace EmGame
     }
     public class Warrior
     {
-        public int _x;
-        public int _y;
-        int hp = 100;
-        double accuracy;
-        int armor = 50;
-        public Faction faction;
-    }
-    public Faction GetFaction(Warrior warrior)
-    {
-        return warrior.faction;
+        int _x;
+        int _y;
+        int _hp = 100;
+        double _accuracy;
+        int _armor = 50;
+        private Faction _faction;
+        public Faction GetFaction(Warrior w)
+        {
+            return w._faction;
+        }
+        public int GetX()
+        {
+            return _x;
+        }
+        public int GetY()
+        {
+            return _y;
+        }
+        public int GetArmor()
+        {
+            return _armor;
+        }
+        public double GetAcc()
+        {
+            return _accuracy;
+        }
+        public int GetHP()
+        {
+            return _hp;
+        }
     }
     public Warrior ExecuteTurn(Warzone)
     {

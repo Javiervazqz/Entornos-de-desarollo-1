@@ -8,15 +8,29 @@ namespace EmGame
         {
 
         }
-        public Faction GetWinner(Warzone wz)
+        public Faction GetWinner(Warzone wz, Warrior w)
         {
-            if (wz.GetWarriorCount(Faction.HUMAN) > 0)
+            int humancount = 0, dwarfcount = 0, orccount = 0, elfcount = 0;
+            for (int i = 0; i <= wz.warriorlist.Count - 1; i++)
+            {
+                if (w.GetFaction(wz.warriorlist[i]) == Faction.HUMAN)
+                    humancount++;
+                if (w.GetFaction(wz.warriorlist[i]) == Faction.DWARF)
+                    dwarfcount++;
+                if (w.GetFaction(wz.warriorlist[i]) == Faction.ORC)
+                    orccount++;
+                else
+                    elfcount++;
+            }
+            int winner = utils.GreaterThanFour(humancount, dwarfcount, orccount, elfcount);
+            if (winner == humancount)
                 return Faction.HUMAN;
-            if (wz.GetWarriorCount(Faction.DWARF) > 0)
+            if (winner == dwarfcount)
                 return Faction.DWARF;
-            if (wz.GetWarriorCount(Faction.ORC) > 0)
+            if (winner == orccount)
                 return Faction.ORC;
-            return Faction.ELF;
+            else
+                return Faction.ELF;
         }
     }
 }

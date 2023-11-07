@@ -27,7 +27,8 @@ namespace EmGame
                 return _damage = 50;
             if (weapon == WeaponType.BOW)
                 return _damage = 40;
-            return _damage = 20;
+            else
+                return _damage = 20;
         }
         public double GetCD()
         {
@@ -37,7 +38,8 @@ namespace EmGame
                 return _cd = 1.5;
             if (weapon == WeaponType.BOW)
                 return _cd = 3.5;
-            return _cd = 0.5;
+            else
+                return _cd = 0.5;
         }
         public int GetRange()
         {
@@ -47,7 +49,8 @@ namespace EmGame
                 return _range = 5;
             if (weapon == WeaponType.BOW)
                 return _range = 10;
-            return _range = 2;
+            else
+                return _range = 2;
         }
     }
 }
