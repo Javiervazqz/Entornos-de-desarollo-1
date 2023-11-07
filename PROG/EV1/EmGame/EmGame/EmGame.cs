@@ -8,13 +8,13 @@ namespace EmGame
         {
 
         }
-        public Faction GetWinner()
+        public Faction GetWinner(Warzone wz)
         {
-            if (Warzone.GetWarriors(Faction.HUMAN) > 0)
+            if (wz.GetWarriorCount(Faction.HUMAN) > 0)
                 return Faction.HUMAN;
-            if (Warzone.GetWarriors(Faction.DWARF) > 0)
+            if (wz.GetWarriorCount(Faction.DWARF) > 0)
                 return Faction.DWARF;
-            if (Warzone.GetWarriors(Faction.ORC) > 0)
+            if (wz.GetWarriorCount(Faction.ORC) > 0)
                 return Faction.ORC;
             return Faction.ELF;
         }
