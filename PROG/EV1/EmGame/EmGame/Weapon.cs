@@ -13,9 +13,9 @@ namespace EmGame
     {
         int _damage;
         double _cd;
-        int _range;
+        double _range;
         WeaponType weapon;
-        public WeaponType GetType()
+        public WeaponType GetWeaponType()
         {
             return weapon;
         }
@@ -41,16 +41,16 @@ namespace EmGame
             else
                 return _cd = 0.5;
         }
-        public int GetRange()
+        public double GetRange()
         {
             if (weapon == WeaponType.FIST)
-                return _range = 1;
+                return _range = 1.5;
             if (weapon == WeaponType.SWORD)
-                return _range = 5;
+                return _range = 3.5;
             if (weapon == WeaponType.BOW)
-                return _range = 10;
+                return _range = 7.5;
             else
-                return _range = 2;
+                return _range = 2.5;
         }
     }
 }

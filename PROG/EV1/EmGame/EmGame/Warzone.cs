@@ -36,7 +36,12 @@ namespace EmGame
         }
         public void ExecuteRound()
         {
-            
+            for (int i = 0; i <= warriorlist.Count - 1; i++)
+            {
+                Warrior warr = warriorlist[i];
+                warr.ExecuteTurn();
+
+            }
         }
     }
 }

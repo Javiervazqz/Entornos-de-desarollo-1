@@ -41,8 +41,28 @@ namespace EmGame
         {
             return _hp;
         }
+        public int SetX(int n1)
+        {
+            return _x = n1;
+        }
+        public int SetY(int n1)
+        {
+            return _y = n1;
+        }
+        public int SetArmor(int n1)
+        {
+            return _armor = n1;
+        }
+        public double SetAcc(int n1)
+        {
+            return _accuracy = n1;
+        }
+        public int SetHP(int n1)
+        {
+            return _hp = n1;
+        }
     }
-    public Warrior ExecuteTurn(Warzone)
+    public void ExecuteTurn(Warzone wz)
     {
 
     }

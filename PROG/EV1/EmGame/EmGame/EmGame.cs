@@ -22,12 +22,12 @@ namespace EmGame
                 else
                     elfcount++;
             }
-            int winner = utils.GreaterThanFour(humancount, dwarfcount, orccount, elfcount);
-            if (winner == humancount)
+            int winint = utils.GreaterThanFour(humancount, dwarfcount, orccount, elfcount);
+            if (winint == humancount)
                 return Faction.HUMAN;
-            if (winner == dwarfcount)
+            if (winint == dwarfcount)
                 return Faction.DWARF;
-            if (winner == orccount)
+            if (winint == orccount)
                 return Faction.ORC;
             else
                 return Faction.ELF;
