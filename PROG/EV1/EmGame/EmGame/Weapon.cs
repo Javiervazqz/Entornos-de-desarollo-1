@@ -19,7 +19,7 @@ namespace EmGame
         {
             return weapon;
         }
-        public int GetDamage()
+        public int GetDamage(WeaponType weapon)
         {
             if (weapon == WeaponType.FIST)
                 return _damage = 10;

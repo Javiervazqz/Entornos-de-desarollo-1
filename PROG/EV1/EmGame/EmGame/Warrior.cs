@@ -7,16 +7,18 @@ namespace EmGame
         HUMAN,
         DWARF,
         ORC,
-        ELF
+        ELF,
+        TIE
     }
     public class Warrior
     {
         int _x;
         int _y;
         int _hp = 100;
-        double _accuracy;
+        double _accuracy = utils.GetRandom(0,1);
         int _armor = 50;
-        private Faction _faction;
+        Faction _faction;
+        WeaponType _weapon = WeaponType.DAGGERS;
         public Faction GetFaction(Warrior w)
         {
             return w._faction;

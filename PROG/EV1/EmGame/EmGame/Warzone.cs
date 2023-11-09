@@ -33,18 +33,9 @@ namespace EmGame
             int dy = y2 - y1;
             return Math.Sqrt((dx * dx) + (dy * dy));
         }
-        public void Attack(Warrior attacker, Warrior receiver)
+        public void Attack(Warrior attacker, Warrior receiver, Weapon weapon)
         {
-            receiver.GetHP();
-        }
-        public void ExecuteRound()
-        {
-            for (int i = 0; i <= warriorlist.Count - 1; i++)
-            {
-                Warrior warr = warriorlist[i];
-                warr.ExecuteTurn();
-
-            }
+            receiver.SetHP(receiver.GetHP() - weapon.GetDamage(weapon.GetWeaponType()));
         }
     }
 }

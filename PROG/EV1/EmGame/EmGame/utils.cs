@@ -20,5 +20,16 @@ namespace EmGame
             else
                 return n4;
         }
+        public static int MinorThanFour(int n1, int n2, int n3, int n4)
+        {
+            if (n1 < n2 && n1 < n3 && n1 < n4)
+                return n1;
+            if (n2 < n3 && n2 < n4)
+                return n2;
+            if (n3 < n4)
+                return n3;
+            else
+                return n4;
+        }
     }
 }

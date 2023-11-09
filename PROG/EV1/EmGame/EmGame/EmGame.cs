@@ -22,15 +22,26 @@ namespace EmGame
                 else
                     elfcount++;
             }
-            int winint = utils.GreaterThanFour(humancount, dwarfcount, orccount, elfcount);
+            int winint = utils.MinorThanFour(humancount, dwarfcount, orccount, elfcount);
             if (winint == humancount)
                 return Faction.HUMAN;
             if (winint == dwarfcount)
                 return Faction.DWARF;
             if (winint == orccount)
                 return Faction.ORC;
-            else
+            if (winint == elfcount)
                 return Faction.ELF;
+            else
+                return Faction.TIE;
+        }
+        public void ExecuteRound(Warzone wz)
+        {
+            for (int i = 0; i <= wz.warriorlist.Count - 1; i++)
+            {
+                Warrior warr = wz.warriorlist[i];
+                Warrior.ExecuteTurn();
+
+            }
         }
     }
 }
