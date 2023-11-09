@@ -13,9 +13,16 @@ namespace EmGame
                 warriorlist.Add(new Warrior());
             }
         }
-        public int GetWarriorCount(Faction team)
+        public int GetWarriorCount(Faction faction)
         {
-            return warriorlist.Count;
+            int count = 0;
+            for (int i = 0; i <= warriorlist.Count - 1; i++)
+            {
+                Warrior w = warriorlist[i];
+                if (w.GetFaction() == faction)
+                    count++;
+            }
+            return count;
         }
         public Warrior? GetWarriorAt(int x, int y, Warrior warrior)
         {

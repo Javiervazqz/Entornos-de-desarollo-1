@@ -19,9 +19,9 @@ namespace EmGame
         int _armor = 50;
         Faction _faction;
         WeaponType _weapon = WeaponType.DAGGERS;
-        public Faction GetFaction(Warrior w)
+        public Faction GetFaction()
         {
-            return w._faction;
+            return _faction;
         }
         public int GetX()
         {
@@ -66,6 +66,6 @@ namespace EmGame
     }
     public void ExecuteTurn(Warzone wz)
     {
-
+        
     }
 }
