@@ -8,7 +8,7 @@ namespace aMain
         {
             //func.Functions.Cuadrado();
             //System.Console.WriteLine();
-            func.Functions.Triangle2();
+            func.Functions.Multiplos(500);
             Console.WriteLine();
         }
     }

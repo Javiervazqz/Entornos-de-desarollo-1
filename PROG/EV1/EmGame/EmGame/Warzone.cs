@@ -44,5 +44,16 @@ namespace EmGame
         {
             receiver.SetHP(receiver.GetHP() - weapon.GetDamage(weapon.GetWeaponType()));
         }
+        public int GetEnemiesAroundCount(Warrior warrior)
+        {
+
+        }
+        public void ExecuteRound()
+        {
+            for (int i = 0; i < warriorlist.Count; i++)
+            {
+                warriorlist[i].ExecuteTurn();
+            }
+        }
     }
 }

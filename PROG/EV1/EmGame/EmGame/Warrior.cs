@@ -64,7 +64,7 @@ namespace EmGame
             return _hp = n1;
         }
     }
-    public void ExecuteTurn(Warzone wz)
+    public void ExecuteTurn()
     {
         
     }

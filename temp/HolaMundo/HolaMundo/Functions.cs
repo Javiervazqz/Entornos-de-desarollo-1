@@ -431,5 +431,29 @@ namespace func
                 }
             }
         }
+        public static void CheckVowel(string x)
+        {
+            switch (x)
+            {
+                case "a":
+                case "e":
+                case "i":
+                case "o":
+                case "u":
+                    Console.WriteLine("vocal");
+                    break;
+                default:
+                    Console.WriteLine("consonante");
+                    break;
+            }
+        }
+        public static void Multiplos(int limit)
+        {
+            for (int i = 1; i < limit; i++)
+            {
+                if (i % 3 == 0 && i % 5 == 0)
+                    Console.Write(i + " ");
+            }
+        }
     }
 }

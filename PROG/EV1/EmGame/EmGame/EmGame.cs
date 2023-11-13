@@ -35,14 +35,5 @@ namespace EmGame
             else
                 return Faction.TIE;
         }
-        public void ExecuteRound(Warzone wz)
-        {
-            for (int i = 0; i <= wz.warriorlist.Count - 1; i++)
-            {
-                Warrior warr = wz.warriorlist[i];
-                Warrior.ExecuteTurn();
-
-            }
-        }
     }
 }
