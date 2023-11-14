@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            DateTime date = new DateTime(24, 09, 2005);
+            Console.WriteLine(date.DayOfWeek());
         }
     }
 }
