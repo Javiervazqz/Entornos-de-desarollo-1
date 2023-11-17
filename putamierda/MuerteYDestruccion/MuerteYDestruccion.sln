@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MuerteYDestruccion", "MuerteYDestruccion\MuerteYDestruccion.csproj", "{AA0A8053-262F-4D6A-A5BF-72BD53E49874}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculadoraLong", "MuerteYDestruccion\CalculadoraLong.csproj", "{AA0A8053-262F-4D6A-A5BF-72BD53E49874}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -2,11 +2,10 @@
 
 namespace MuerteYDestruccion
 {
-    public class OperacionesToGuapas
+    public class Operations
     {
-
-        char a = '5';
-        int n = a - '0';
+        //char a = '5';
+        //int n = a - '0';
         List <int> number1 = new List<int> ();
         List <int> number2 = new List<int> ();
         public List<int> GetBigger()
