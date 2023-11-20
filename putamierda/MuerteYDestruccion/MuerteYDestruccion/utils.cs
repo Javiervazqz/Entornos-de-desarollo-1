@@ -16,8 +16,6 @@ namespace MuerteYDestruccion
             }
             return length;
         }
-        public int BigNumber1 = 169;
-        public int BigNumber2 = 145;
         public static List<int> ConvertToList(long n1)
         {
             List<int> l1 = new List<int>();
@@ -30,17 +28,6 @@ namespace MuerteYDestruccion
                 n1 = coc;
             }
             return InvertList(l1);
-            /*
-            List<int> l1 = new List<int>();
-            long length = GetLongLength(n1);
-            for (int i = 0; i < length; i++)
-            {
-                double num = n1 / 10;
-                int provnum = (int)Math.Floor(num);
-                double insertnum = (num - provnum) * 10;
-                l1.Add((int)insertnum);
-            }
-            return l1;*/
         }
         public static List<int> InvertList(List<int> list)
         {
