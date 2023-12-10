@@ -6,6 +6,7 @@ namespace CalculadoraLong
     {
         //char a = '5';
         //int n = a - '0';
+        // Javi: Pero, ..., no compruebas el contenido???
         public static List<int> GetBigger(List<int> number1, List<int> number2)
         {
             if (number1.Count > number2.Count)
