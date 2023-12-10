@@ -8,6 +8,7 @@ namespace CalculadoraLong
         {
             long length = 0;
             long n1 = num;
+            // Javi: No sería mejor un while?
             for (int i = 0; n1 > 0; i++)
             {
                 if (n1 > 0)
