@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Classes
 {
+    // Javi: los métodos de esta clase no son exáctamente los que se pedían
     public class Jar
     {
             double capacity = 1000.0;
