@@ -22,6 +22,7 @@ namespace Classes
         }
         public void ChangeToNextState()
         {
+            // Javi: Creo que esto no va bien
             if (--state == Estado.retirando_producto)
                 state = Estado.esperando;
             ++state;
