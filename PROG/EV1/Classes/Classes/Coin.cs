@@ -44,6 +44,7 @@ namespace Classes
         }
         public Moneda ToMoneda(int centims)
         {
+            // Javi: Mal
             return (Moneda)centims;
         }
     }
