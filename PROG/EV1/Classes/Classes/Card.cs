@@ -29,15 +29,19 @@ namespace Classes
         public colorType color;
         public int n = 1;
         public figureType figure;
+
+        // Javi: Pero, ..., que!??!?!?!?!?!
         public static int GetNumber(int n)
         {
             return n;
             // return IsValid() ? _number : -1; --> Si es válido, devuelve _number, si no es válido, -1
         }
+        // Javi: Que!?!?!?!?!?
         public palo GetPalo(palo p)
         {
             return p;
         }
+        // Javi: No entiendo esta función: int? n   ??????? Debería ser una función de tipo objeto, no de clase
         public static bool IsValid(int? n)
         {
             return (n > 14 || n <= 0 || n == null);
