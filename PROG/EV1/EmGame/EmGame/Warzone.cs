@@ -24,6 +24,7 @@ namespace EmGame
             }
             return count;
         }
+        // Javi: Mal nombre, mal return
         public Warrior? GetWarriorAt(int x, int y, Warrior warrior)
         {
             if (warrior.GetX() == x && warrior.GetY() == y)
