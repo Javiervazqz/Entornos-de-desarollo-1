@@ -12,6 +12,7 @@ namespace Classes
         {
             private int _value1;
             private int _value2;
+            // Javi: MAL!!!!!!! Coméntamelo en clase
             List<Piece> l = new List<Piece>();
             public int GetValue1()
             {
