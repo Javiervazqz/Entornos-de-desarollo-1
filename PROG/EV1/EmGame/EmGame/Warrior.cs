@@ -64,6 +64,7 @@ namespace EmGame
             return _hp = n1;
         }
     }
+    // Javi: Que!?!?!?!?!??!?!
     public void ExecuteTurn()
     {
         
