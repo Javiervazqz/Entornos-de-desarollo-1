@@ -10,6 +10,7 @@ namespace Classes
     {
         public class Deck
         {
+            // Javi: MAL!!!! Coméntamelo en clase!!!
             public DominoPiece.Piece ExtractPiece(List<DominoPiece.Piece> l)
             {
                 int r = utils.GetRandom(0, l.Count - 1);
