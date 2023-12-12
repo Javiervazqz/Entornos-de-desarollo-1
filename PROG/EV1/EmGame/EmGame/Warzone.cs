@@ -13,7 +13,7 @@ namespace EmGame
                 warriorlist.Add(new Warrior());
             }
         }
-        public int GetWarriorCount(Faction faction)
+        public int GetWarriorCountWithFaction(Faction faction)
         {
             int count = 0;
             for (int i = 0; i <= warriorlist.Count - 1; i++)
