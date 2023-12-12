@@ -6,12 +6,35 @@ namespace Mierdon256
     {
         private List<Person> _personList = new List<Person>();
 
-        public int PersonCount
+        public int PersonCount => GetPersonCount();
+        public int GetPersonCount()
         {
-            get
+            return _personList.Count;
+        }
+        //public int PersonCount
+        //{
+        //    get
+        //    {
+        //        return _personList.Count;
+        //    }
+        //}
+        public Person? GetPersonAt(int index)
+        {
+            if (index == null)
+                return null;
+            for (int i = 0; i < _personList.Count; i++)
             {
-                return _personList.Count;
+                if (i == index)
+                    return _personList[i];
             }
+        }
+        public void RemovePersonAt(int index)
+        {
+            _personList.RemoveAt(index);
+        }
+        public void AddPerson(Person person)
+        {
+            _personList.Add(person);
         }
     }
 }
