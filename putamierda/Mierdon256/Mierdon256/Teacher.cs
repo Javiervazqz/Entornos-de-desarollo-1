@@ -2,7 +2,7 @@
 
 namespace Mierdon256
 {
-    public class Teacher : Person
+    public class Teacher : Person, IPerro
     {
         public double bloodlust;
         public Teacher(double bloodlust)
@@ -11,13 +11,20 @@ namespace Mierdon256
         }
         public Teacher(string name, double bloodlust) : base(name, Gender.OTHER)
         {
-            this.name = name;
+            this.Name = name;
             this.bloodlust = bloodlust;
             this.gender = Gender.OTHER;
         }
         public Teacher()
         {
 
+        }
+        public override string GetFullName()
+        {
+            return "<PROFESOR>" + Name + "</PROFESOR>";
+        }
+        public override void ExecuteTurn()
+        {
         }
     }
 }

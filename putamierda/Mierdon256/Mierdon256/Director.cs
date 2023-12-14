@@ -2,9 +2,8 @@
 
 namespace Mierdon256
 {
-    public class Student : Person
+    public class Director : Teacher
     {
-        public long NIA;
         public override void ExecuteTurn()
         {
         }

@@ -8,9 +8,9 @@ namespace Mierdon256
         FEMALE,
         OTHER
     }
-    public class Person
+    public abstract class Person
     {
-        public string name;
+        public string Name;
         public Gender gender;
         public int[] array;
         public Person() : this ("Javi", Gender.FEMALE) //se invoca a otro constructor desde este constructor
@@ -19,7 +19,7 @@ namespace Mierdon256
         }
         public Person(string name, Gender gender)
         {
-            this.name = name;
+            this.Name = name;
             this.gender = gender;
             int arrayindex = 10;
             this.array = new int[arrayindex];
@@ -27,6 +27,31 @@ namespace Mierdon256
             {
                 array[i] = i;
             }
+        }
+        public virtual string GetFullName()
+        {
+            return Name;
+        }
+        public abstract void ExecuteTurn();
+        public void Metodo1()
+        {
+
+        }
+        public void Metodo2()
+        {
+
+        }
+        public void Metodo3()
+        {
+
+        }
+        public void Metodo4()
+        {
+
+        }
+        public void Metodo5()
+        {
+
         }
     }
 }

@@ -18,7 +18,7 @@ namespace Mierdon256
         //        return _personList.Count;
         //    }
         //}
-        public Person? GetPersonAt(int index)
+        public Person? GetPersonAt(int? index)
         {
             if (index == null)
                 return null;
@@ -27,6 +27,7 @@ namespace Mierdon256
                 if (i == index)
                     return _personList[i];
             }
+            return null;
         }
         public void RemovePersonAt(int index)
         {
@@ -35,6 +36,14 @@ namespace Mierdon256
         public void AddPerson(Person person)
         {
             _personList.Add(person);
+        }
+        public void ExecuteFrame()
+        {
+            for (int i = 0; i < _personList.Count; i++)
+            {
+                Person p = _personList[i];
+                p.ExecuteTurn();
+            }
         }
     }
 }
