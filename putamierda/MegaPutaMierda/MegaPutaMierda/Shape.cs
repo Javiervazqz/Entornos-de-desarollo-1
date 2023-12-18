@@ -15,6 +15,7 @@ namespace MegaPutaMierda
         protected Point2D _position = new Point2D();
         private string _name;
 
+
         public abstract double GetArea();
 
         public abstract bool HasArea();

@@ -19,22 +19,13 @@ namespace MegaPutaMierda
         }
         public Point2D GetMin() => _min;
         public Point2D GetMax() => _max;
-        public double GetHeight() => 1.0;
-        public double GetWidth() => 1.0;
+        public double GetHeight() => _max.y - _min.y;
+        public double GetWidth() => _max.x - _min.x;
 
-        public override double GetArea()
-        {
-            throw new NotImplementedException();
-        }
+        public override double GetArea() => GetHeight() * GetWidth();
 
-        public override ShapeType GetShapeType()
-        {
-            throw new NotImplementedException();
-        }
+        public override ShapeType GetShapeType() => ShapeType.RECT;
 
-        public override bool HasArea()
-        {
-            throw new NotImplementedException();
-        }
+        public override bool HasArea() => true;
     }
 }

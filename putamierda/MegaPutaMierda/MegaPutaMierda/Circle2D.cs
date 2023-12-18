@@ -8,10 +8,7 @@ namespace MegaPutaMierda
         public double SetRadius(double index) => _radius = index;
         public double GetRadius() => _radius;
 
-        public override double GetArea()
-        {
-            throw new NotImplementedException();
-        }
+        public override double GetArea() => Math.PI*(_radius*_radius);
 
         public override ShapeType GetShapeType()
         {
