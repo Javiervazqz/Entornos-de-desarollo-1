@@ -40,10 +40,7 @@ namespace MegaPutaMierda
             throw new NotImplementedException();
         }
 
-        public override ShapeType GetShapeType()
-        {
-            throw new NotImplementedException();
-        }
+        public override ShapeType GetShapeType() => ShapeType.POLYLINE;
 
         public override bool HasArea()
         {
