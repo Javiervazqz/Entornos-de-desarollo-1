@@ -9,7 +9,10 @@ namespace MegaPutaMierda
             return -1;
         }
 
-        public virtual ShapeType GetShapeType();
+        public override ShapeType GetShapeType()
+        {
+            throw new NotImplementedException();
+        }
 
         public override bool HasArea()
         {

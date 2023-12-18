@@ -9,7 +9,7 @@ namespace MegaPutaMierda
         double GetArea();
         bool HasArea();
         ShapeType GetShapeType();
-        void GetName();
+        string GetName();
         void SetName(string name);
     }
 }

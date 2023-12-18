@@ -12,10 +12,12 @@ namespace MegaPutaMierda
     }
     public abstract class Shape : IShape
     {
-        protected Point2D _position;
+        protected Point2D _position = new Point2D();
         private string _name;
 
         public abstract double GetArea();
+
+        public abstract bool HasArea();
 
         public string GetName()
         {
@@ -29,9 +31,19 @@ namespace MegaPutaMierda
 
         public abstract ShapeType GetShapeType();
 
-        public abstract bool HasArea();
+        public void SetName(string name)
+        {
+            if (name == null)
+                return;
+            _name = name;
+        }
 
-        public void SetName(string name) => _name = name;
-        public void SetPosition(Point2D position) => _position = position;
+        public void SetPosition(Point2D position)
+        {
+            if (position == null)
+                return;
+            _position = position;
+        }
+
     }
 }
