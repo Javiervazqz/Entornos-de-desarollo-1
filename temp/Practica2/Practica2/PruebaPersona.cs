@@ -4,13 +4,9 @@
     {
         static void Main(string[] args)
         {
-            Persona p = new Persona();
-            p.SetAge(24);
-            p.SetName("jose");
-            p.Saludar();
+            Persona p = new Persona("juan", 32);
             Persona p2 = new PersonaInglesa();
-            p2.SetAge(24);
-            p2.SetName("juan");
+            p.Saludar();
             p2.Saludar();
         }
     }

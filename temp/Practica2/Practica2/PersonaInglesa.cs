@@ -8,5 +8,15 @@ namespace Practica2
         {
             Console.WriteLine("Hi im " + GetName() + " and i have " + GetAge());
         }
+        public PersonaInglesa()
+        {
+            name = "josetrixius";
+            age = 19;
+        }
+        public PersonaInglesa(string name, int age)
+        {
+            this.name = name;
+            this.age = age;
+        }
     }
 }
