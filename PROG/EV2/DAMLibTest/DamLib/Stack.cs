@@ -2,16 +2,19 @@
 {
     public class Stack<T>
     {
-        T[] _stack;
+        T[] _stack = new T[3];
         public void Push(T newelement)
         {
-            T[] _stack = this._stack;
-            for (int i = 0; i <= this._stack.Length; i++)
+            int oldstackcount = GetCount();
+            T[] _stack = new T[oldstackcount + 1];
+            for (int i = 0; i <= this._stack.Length - 1; i++)
             {
                 _stack[i] = this._stack[i];
-                if (i == this._stack.Length)
-                    _stack[i] = newelement;
+                if (i == this._stack.Length - 1)
+                    _stack[i + 1] = newelement;
             }
+            this._stack = _stack;
+        
         }
         public T Pop()
         {
