@@ -11,6 +11,8 @@ namespace DamLibTest
             s.Push("Jose Manuel");
             s.Push("Josetrix");
             s.Pop();
+            Console.WriteLine(s.IsEmpty());
+            s.PrintStack();
         }
     }
 }

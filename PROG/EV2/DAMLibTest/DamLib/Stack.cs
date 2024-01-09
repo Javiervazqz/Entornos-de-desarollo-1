@@ -2,9 +2,11 @@
 {
     public class Stack<T>
     {
-        T[] _stack = new T[3];
+        private T[] _stack = new T[1];
         public void Push(T newelement)
         {
+            if (newelement == null)
+                return;
             int oldstackcount = GetCount();
             T[] _stack = new T[oldstackcount + 1];
             for (int i = 0; i <= this._stack.Length - 1; i++)
@@ -16,25 +18,20 @@
             this._stack = _stack;
         
         }
-        public T Pop()
+        public T[] Pop()
         {
-            T res = GetTop();
             _stack[_stack.Length - 1] = default(T);
-            return res;
+            return _stack;
         }
-        public T GetTop()
-        {
-            return _stack[_stack.Length - 1];
-        }
-        public bool IsEmpty()
-        {
-            for (int i = 0; i > _stack.Length; i++)
-            {
-                if (_stack[i] != null)
-                    return false;
-            }
-            return true;
-        }
+        public T GetTop() => _stack[_stack.Length - 1];
+        public bool IsEmpty() => _stack.Length == 0;
         public int GetCount() => _stack.Length;
+        public void PrintStack()
+        {
+            for (int i = 0; i < _stack.Length; i++)
+            {
+                Console.WriteLine(_stack[i]);
+            }
+        }
     }
 }
