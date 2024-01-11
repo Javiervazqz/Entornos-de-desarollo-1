@@ -24,7 +24,7 @@ namespace DamLibTest
             s.Add("roberto");
             s.Add("alberto");
             s.Add("javi");
-            s.Remove("roberto");
+            s.Remove("alberto");
             s.PrintSet();
         }
     }

@@ -44,36 +44,17 @@ namespace DamLib
                 return;
             T[] _set = new T[Count - 1];
             int position = IndexOf(element);
-            //int i = 0;
-            //while (i < Count)
-            //{
-            //    if (i == position)
-            //    {
-            //        i++;
-            //        continue;
-            //    }
-            //    else
-            //    {
-            //        i++;
-            //        _set[i - 1] = this._set[i];
-            //    }
-            //}
             for (int i = 0; i < Count; i++)
             {
+                i--;
                 if (i == position)
                 {
+                    i++;
                     continue;
                 }
-                else if (i == Count - 1)
-                {
-                    _set[i - 1] = this._set[i];
-                }
-                else
-                {
-                    _set[i] = this._set[i];
-                }
+                i++;
+                _set[i] = this._set[i];
             }
-
             this._set = _set;
         }
         public bool Contains(T newelement)
