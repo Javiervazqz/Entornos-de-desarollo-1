@@ -40,16 +40,41 @@ namespace DamLib
         }
         public void Remove(T element)
         {
-            T[] _set = new T[Count - 1];
             if (!Contains(element))
                 return;
+            T[] _set = new T[Count - 1];
             int position = IndexOf(element);
-            for(int i = 0; i < Count - 1; i++)
+            //int i = 0;
+            //while (i < Count)
+            //{
+            //    if (i == position)
+            //    {
+            //        i++;
+            //        continue;
+            //    }
+            //    else
+            //    {
+            //        i++;
+            //        _set[i - 1] = this._set[i];
+            //    }
+            //}
+            for (int i = 0; i < Count; i++)
             {
                 if (i == position)
-                    i++;
-                _set[i] = this._set[position];
+                {
+                    continue;
+                }
+                else if (i == Count - 1)
+                {
+                    _set[i - 1] = this._set[i];
+                }
+                else
+                {
+                    _set[i] = this._set[i];
+                }
             }
+
+            this._set = _set;
         }
         public bool Contains(T newelement)
         {
