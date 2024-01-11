@@ -21,7 +21,10 @@ namespace DamLibTest
             //q.PrintQueue();
             DamLib.Set<string> s = new DamLib.Set<string>();
             s.Add("juan");
-            s.Add("juanito");
+            s.Add("roberto");
+            s.Add("alberto");
+            s.Add("javi");
+            s.Remove("alberto");
             s.PrintSet();
         }
     }

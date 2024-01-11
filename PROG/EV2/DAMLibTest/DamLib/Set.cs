@@ -16,6 +16,15 @@ namespace DamLib
         //}
         public bool Empty => _set[0] == null;
         public int Count => Empty ? 0 : _set.Length;
+        public int IndexOf(T element)
+        {
+            for (int i = 0; i < Count - 1; i++)
+            {
+                if (_set[i].Equals(element))
+                    return i;
+            }
+            return -1;
+        }
         public void Add(T newelement)
         {
             T[] _set = new T[Count + 1];
@@ -29,18 +38,22 @@ namespace DamLib
             }
             this._set = _set;
         }
-        public void Remove()
+        public void Remove(T element)
         {
-
+            T[] _set = new T[Count - 1];
+            if (!Contains(element))
+                return;
+            int position = IndexOf(element);
+            for(int i = 0; i < Count - 1; i++)
+            {
+                if (i == position)
+                    i++;
+                _set[i] = this._set[position];
+            }
         }
         public bool Contains(T newelement)
         {
-            for (int i = 0; i <= Count - 1; i++)
-            {
-                if (_set[i].Equals(newelement)) //Equals es de object
-                    return true;
-            }
-            return false;
+            return IndexOf(newelement) >= 0;
         }
         public void PrintSet()
         {
