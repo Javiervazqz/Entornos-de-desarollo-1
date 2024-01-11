@@ -19,6 +19,10 @@ namespace DamLibTest
             //q.ToQueue("Josetrix");
             //q.DeQueue();
             //q.PrintQueue();
+            DamLib.Set<string> s = new DamLib.Set<string>();
+            s.Add("juan");
+            s.Add("juanito");
+            s.PrintSet();
         }
     }
 }
