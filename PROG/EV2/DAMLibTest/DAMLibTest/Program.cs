@@ -13,12 +13,12 @@ namespace DamLibTest
             //s.Pop();
             //Console.WriteLine(s.IsEmpty());
             //s.PrintStack();
-            DamLib.Queue<string> q = new DamLib.Queue<string>();
-            q.ToQueue("Jose Mari");
-            q.ToQueue("Jose Manuel");
-            q.ToQueue("Josetrix");
-            q.DeQueue();
-            q.PrintQueue();
+            //DamLib.Queue<string> q = new DamLib.Queue<string>();
+            //q.ToQueue("Jose Mari");
+            //q.ToQueue("Jose Manuel");
+            //q.ToQueue("Josetrix");
+            //q.DeQueue();
+            //q.PrintQueue();
         }
     }
 }

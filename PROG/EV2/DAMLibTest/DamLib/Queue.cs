@@ -6,9 +6,18 @@ namespace DamLib
     {
         T[] _queue = new T[1];
         public int Count => _queue.Length;
-        public T First => _queue[1];
+        public T? First
+        {
+            get
+            {
+                if (Empty)
+                    return default(T);
+                return _queue[1];
+            }
+        }
+        public T? First2 => Empty ? default(T) : _queue[1]; // Son iguales los dos First, solo cambia el syntax
         public T Last => _queue[_queue.Length - 1];
-        public bool Empty => _queue.Length == 0;
+        public bool Empty => _queue[1] == null;
         public void ToQueue (T newelement)
         {
             if (newelement == null)
@@ -22,6 +31,7 @@ namespace DamLib
             }
              this._queue = _queue;
         }
+#nullable disable
         public void DeQueue()
         {
             T[] _queue = new T[Count - 1];
@@ -33,6 +43,7 @@ namespace DamLib
             }
             this._queue = _queue;
         }
+#nullable enable
         public void PrintQueue()
         {
             for (int i = 0; i < _queue.Length; i++)
