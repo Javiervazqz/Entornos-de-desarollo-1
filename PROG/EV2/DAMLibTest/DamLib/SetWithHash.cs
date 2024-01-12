@@ -2,18 +2,14 @@
 
 namespace DamLib
 {
-    public class Set<T>
+    public class SetWithHash<T>
     {
-        private T[] _set = new T[1];
-        //public override bool Equals(object? obj) sobreescribir el equals de objeto
-        //{
-        //    if (this == obj)
-        //        return true;
-        //    if (obj is not Set<T>)
-        //        return false;
-        //    Set<T> s = (Set<T>)obj;
-        //    return s._set == _set;
-        //}
+        private T[] _set = new T[0];
+        private int[] _hash = new int[0];
+        public override int GetHashCode()
+        {
+            return IndexOfWithoutElement()* Count ^ 93;
+        }
         public T[] Clone(T[] arr1)
         {
             T[] arr2 = new T[arr1.Length];
@@ -35,6 +31,13 @@ namespace DamLib
                     return i;
             }
             return -1;
+        }
+        public int IndexOfWithotElement()
+        {
+            for (int i = 0; i < Count - 1; i++)
+            {
+
+            }
         }
         public void Add(T newElement)
         {
