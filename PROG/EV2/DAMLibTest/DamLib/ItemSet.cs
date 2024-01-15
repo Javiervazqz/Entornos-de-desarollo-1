@@ -2,27 +2,30 @@
 
 namespace DamLib
 {
-    public class SetWithHash<T>
+    public class ItemSet<T>
     {
-        private T[] _set = new T[0];
-        private int[] _hash = new int[0];
-
-        public bool Empty => _set.Length < 0;
-        public int Count => Empty ? 0 : _set.Length;
+        public bool Empty => _items.Length < 0;
+        public int Count => Empty ? 0 : _items.Length;
+        private class Item
+        {
+            public T element;
+            public int hash;
+        }
+        Item[] _items = new Item[0];
         public int IndexOf(T element)
         {
             if (element == null)
                 return -1;
             for (int i = 0; i < Count - 1; i++)
             {
-                if (_set[i].Equals(element))
+                if (_items[i].Equals(element))
                     return i;
             }
             return -1;
         }
         public void GenerateHashes()
         {
-            for (int i = 0; i < _set.Length - 1; i++)
+            for (int i = 0; i < _items.Length - 1; i++)
             {
                 _hash[i] = i * Count ^ 93;
             }
@@ -44,33 +47,33 @@ namespace DamLib
             }
             return arr2;
         }
-        public void Add(T newElement)
+        public void Add(Item newElement)
         {
             if (newElement == null || Contains(newElement))
                 return;
-            T[] ArrayTemporal = new T[Count + 1];
-            for (int i = 0; i < _set.Length - 1; i++)
+            Item[] ArrayTemporal = new Item[Count + 1];
+            for (int i = 0; i < _items.Length - 1; i++)
             {
-                ArrayTemporal[i] = _set[i];
+                ArrayTemporal[i] = _items[i];
             }
             ArrayTemporal[Count] = newElement;
-            _set = ArrayTemporal;
+            _items = ArrayTemporal;
         }
         public void Remove(T element)
         {
             if (!Contains(element))
                 return;
-            T[] ArrayTemporal = new T[Count - 1];
+            Item[] ArrayTemporal = new Item[Count - 1];
             int index = IndexOf(element);
-            for (int i = 0, j = 0; i < Count; i++,j++)
+            for (int i = 0, j = 0; i < Count; i++, j++)
             {
                 if (i == index)
                 {
                     j++;
                 }
-                ArrayTemporal[i] = _set[j];
+                ArrayTemporal[i] = _items[j];
             }
-            _set = ArrayTemporal;
+            _items = ArrayTemporal;
         }
         public bool Contains(T element)
         {
@@ -78,9 +81,9 @@ namespace DamLib
         }
         public void PrintSet()
         {
-            for (int i = 0; i < _set.Length; i++)
+            for (int i = 0; i < _items.Length; i++)
             {
-                Console.WriteLine(_set[i]);
+                Console.WriteLine(_items[i]);
             }
         }
     }
