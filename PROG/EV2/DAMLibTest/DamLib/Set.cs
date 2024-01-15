@@ -27,10 +27,10 @@ namespace DamLib
         public int Count => Empty ? 0 : _set.Length;
         public int IndexOf(T element)
         {
+            if (element == null)
+                return -1;
             for (int i = 0; i < Count - 1; i++)
             {
-                if (element == null)
-                    return -1;
                 if (_set[i].Equals(element))
                     return i;
             }
@@ -61,9 +61,9 @@ namespace DamLib
                 {
                     j++;
                 }
-                ArrayTemporal[i] = this._set[j];
+                ArrayTemporal[i] = _set[j];
             }
-            this._set = ArrayTemporal;
+            _set = ArrayTemporal;
         }
         public bool Contains(T element)
         {

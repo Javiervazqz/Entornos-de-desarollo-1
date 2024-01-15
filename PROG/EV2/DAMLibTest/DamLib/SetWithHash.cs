@@ -6,9 +6,33 @@ namespace DamLib
     {
         private T[] _set = new T[0];
         private int[] _hash = new int[0];
-        public override int GetHashCode()
+        public bool Empty => _set.Length < 0;
+        public int Count => Empty ? 0 : _set.Length;
+        public int IndexOf(T element)
         {
-            return IndexOfWithoutElement()* Count ^ 93;
+            if (element == null)
+                return -1;
+            for (int i = 0; i < Count - 1; i++)
+            {
+                if (_set[i].Equals(element))
+                    return i;
+            }
+            return -1;
+        }
+        public void SetHashCodes()
+        {
+            for (int i = 0; i < _set.Length - 1; i++)
+            {
+                _hash[i] = i * Count ^ 93;
+            }
+        }
+        public void SetHashCode(int index)
+        {
+            _hash[index] = index * Count ^ 93;
+        }
+        public int GetHashCode()
+        {
+            return _hash[];
         }
         public T[] Clone(T[] arr1)
         {
@@ -19,54 +43,33 @@ namespace DamLib
             }
             return arr2;
         }
-        public bool Empty => _set.Length < 0;
-        public int Count => Empty ? 0 : _set.Length;
-        public int IndexOf(T element)
-        {
-            for (int i = 0; i < Count - 1; i++)
-            {
-                if (element == null)
-                    return -1;
-                if (_set[i].Equals(element))
-                    return i;
-            }
-            return -1;
-        }
-        public int IndexOfWithotElement()
-        {
-            for (int i = 0; i < Count - 1; i++)
-            {
-
-            }
-        }
         public void Add(T newElement)
         {
-            T[] ArrayTemporal = new T[Count + 1];
             if (newElement == null || Contains(newElement))
                 return;
-            for (int i = 0; i <= this._set.Length - 1; i++)
+            T[] ArrayTemporal = new T[Count + 1];
+            for (int i = 0; i < _set.Length - 1; i++)
             {
-                ArrayTemporal[i] = this._set[i];
-                if (i == this._set.Length - 1)
-                    ArrayTemporal[Count] = newElement;
+                ArrayTemporal[i] = _set[i];
             }
-            this._set = ArrayTemporal;
+            ArrayTemporal[Count] = newElement;
+            _set = ArrayTemporal;
         }
         public void Remove(T element)
         {
             if (!Contains(element))
                 return;
             T[] ArrayTemporal = new T[Count - 1];
-            int position = IndexOf(element);
+            int index = IndexOf(element);
             for (int i = 0, j = 0; i < Count; i++,j++)
             {
-                if (i == position)
+                if (i == index)
                 {
                     j++;
                 }
-                ArrayTemporal[i] = this._set[j];
+                ArrayTemporal[i] = _set[j];
             }
-            this._set = ArrayTemporal;
+            _set = ArrayTemporal;
         }
         public bool Contains(T element)
         {
