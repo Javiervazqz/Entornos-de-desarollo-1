@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace DamLib
 {
@@ -86,9 +87,20 @@ namespace DamLib
                 Console.WriteLine(_items[i]);
             }
         }
-        public void Sort(Item item)
+        public void Sort()
         {
-
+            for (int i = 1, j = 0; i <= Count; i++, j++)
+            {
+                int AuxHash = 0;
+                int v1 = _items[i - 1].Hash;
+                int v2 = _items[i].Hash;
+                if (v1 >= v2)
+                {
+                    AuxHash = v1;
+                    v1 = v2;
+                    v2 = _items[i + 1].Hash;
+                }
+            }
         }
         public int GetLowestMid(int mid)
         {
