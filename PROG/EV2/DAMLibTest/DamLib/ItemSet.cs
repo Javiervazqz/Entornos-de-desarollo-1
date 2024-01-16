@@ -47,7 +47,7 @@ namespace DamLib
             }
             return arr2;
         }
-        public void Add(Item newElement)
+        public void Add(T newElement)
         {
             if (newElement == null || Contains(newElement))
                 return;
@@ -56,7 +56,7 @@ namespace DamLib
             {
                 ArrayTemporal[i] = _items[i];
             }
-            ArrayTemporal[Count] = newElement;
+            ArrayTemporal[Count] = _items[Count - 1].element;
             _items = ArrayTemporal;
         }
         public void Remove(T element)
