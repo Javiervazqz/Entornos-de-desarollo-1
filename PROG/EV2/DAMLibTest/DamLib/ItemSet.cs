@@ -27,12 +27,12 @@ namespace DamLib
         {
             for (int i = 0; i < _items.Length - 1; i++)
             {
-                _hash[i] = i * Count ^ 93;
+                _items[i].hash = i * Count ^ 93;
             }
         }
         public void SetHashCode(int index)
         {
-            _hash[index] = index * Count ^ 93;
+            _items[index].hash = index * Count ^ 93;
         }
         public int GetHashCode()
         {
