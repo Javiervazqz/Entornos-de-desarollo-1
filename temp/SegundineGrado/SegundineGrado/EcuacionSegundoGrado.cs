@@ -32,5 +32,10 @@ namespace SegundineGrado
             res2 = (-b - root) * denom;
             return true;
         }
+        public static bool EcuacionDobleOut(double a, double b, double c, out double res1, out double res2)
+        {
+            double (r1,r2) = EcuacionDoble(ref a, ref b, ref c);
+            if ()
+        }
     }
 }
