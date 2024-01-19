@@ -110,30 +110,30 @@ namespace DamLib
             }
             return mid;
         }
-        public bool BinarySearch(Item item)
-        {
-            int min = 0;
-            int max = Count;
-            while (min <= max)
-            {
-                int mid = (min + max) / 2;
-                while (_items[mid] == item)
-                {
-                    mid = GetLowestMid(mid);
-                    if (_items[mid].Element.Equals(item.Element))
-                        return true;
-                    min++;
-                }
-                if (_items[mid].Hash < item.Hash)
-                {
-                    min = mid + 1;
-                }
-                if (_items[mid].Hash > item.Hash)
-                {
-                    max = mid - 1;
-                }
-            }
-            return false;
-        }
+        //public bool BinarySearch(Item item)
+        //{
+        //    int min = 0;
+        //    int max = Count;
+        //    while (min <= max)
+        //    {
+        //        int mid = (min + max) / 2;
+        //        while (_items[mid] == item)
+        //        {
+        //            mid = GetLowestMid(mid);
+        //            if (_items[mid].Element.Equals(item.Element))
+        //                return true;
+        //            min++;
+        //        }
+        //        if (_items[mid].Hash < item.Hash)
+        //        {
+        //            min = mid + 1;
+        //        }
+        //        if (_items[mid].Hash > item.Hash)
+        //        {
+        //            max = mid - 1;
+        //        }
+        //    }
+        //    return false;
+        //}
     }
 }

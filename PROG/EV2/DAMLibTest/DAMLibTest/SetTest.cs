@@ -4,15 +4,14 @@ namespace DamLibTest
 {
     public class SetTest
     {
+        public static void Test1(DamLib.Set<string> set)
+        {
+
+        }
         static void Main(string[] args)
         {
-            DamLib.Set<string> s = new DamLib.Set<string>();
-            s.Add("juan");
-            s.Add("roberto");
-            s.Add("alberto");
-            s.Add("javi");
-            s.Remove("javi");
-            s.PrintSet();
+            DamLib.Set<string> st1 = new DamLib.Set<string>();
+            DamLib.Set<string> st2 = new DamLib.Set<string>();
         }
     }
 }
