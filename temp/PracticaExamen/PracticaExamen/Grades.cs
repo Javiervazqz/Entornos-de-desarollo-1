@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection.Metadata;
 
 namespace PracticaExamen
 {
@@ -11,7 +12,12 @@ namespace PracticaExamen
         }
         public double GetQualificationForSignature(Signature asignatura)
         {
-
+            for (int i = 0; i < asignatura.GetSignatureCount(); i++)
+            {
+                if (asignatura.GetSignature() == _grades.GetSignature())
+                    return _grades.GetMark();
+            }
+            return -1;
         }
     }
 }

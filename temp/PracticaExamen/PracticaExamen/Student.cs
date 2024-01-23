@@ -32,9 +32,10 @@ namespace PracticaExamen
         }
         public double GetMedia()
         {
+            double result;
             for (int i = 0; i < _grades.Count; i++)
             {
-
+                
             }
         }
         public string GetName() => _name;
