@@ -6,20 +6,19 @@ namespace PracticaExamen
     {
         public enum SignatureType
         {
-            MATH = 0,
-            HISTORY = 1,
-            SCIENCE = 2,
-            LANGUAGE = 3
+            MATH,
+            HISTORY,
+            SCIENCE,
+            LANGUAGE
         }
         public Signature()
         {
             
         }
         private double _mark;
+        private SignatureType _signature;
         int signatureCount = Enum.GetNames(typeof(SignatureType)).Length;
         string[] a = Enum.GetNames(typeof(SignatureType));
-        private SignatureType _signature;
-
         public int GetSignatureCount() => signatureCount;
         public double GetMark() => _mark;
         public void SetMark(double value) => _mark = value;
