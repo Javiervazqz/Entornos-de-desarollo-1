@@ -24,7 +24,7 @@ namespace PracticaExamen
                 Student std = students[i];
                 for (int j = 0; j < std.GetGrades.ListCount; j++)
                 {
-                    if (std.GetGrades[j] == asignatura)
+                    if (std.GetGrades.GetList()[j] == asignatura)
 
                 }
             }
