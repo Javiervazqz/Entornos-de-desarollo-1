@@ -4,7 +4,14 @@ namespace NodosArbol
 {
     public class Node<T>
     {
-        Node<T> _parent;
+        public T content;
+        public T item;
+        private List<Node<T>> _children = new List<Node<T>>();
+        private Node<T> _parent;
+        public void SetParent(Node<T> value) => _parent = value;
+        public Node<T> GetParent => _parent;
+        public delegate void VisitDelegate(Node<T> visitor);
+        public delegate bool CheckDelegate(Node<T> checker);
         public int GetLevel()
         {
             if (this == null)
@@ -13,7 +20,7 @@ namespace NodosArbol
         }
         public Node<T> GetRoot()
         {
-
+            if ()
         }
     }
 }
