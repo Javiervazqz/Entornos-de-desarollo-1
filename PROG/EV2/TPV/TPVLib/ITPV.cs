@@ -6,14 +6,14 @@
         {
             return new RAMTPV();
         }
-        long AddProduct(Product product);
+        long? AddProduct(Product product);
         void RemoveProductWithId(long id);
         void RemoveProduct(Product product)
         {
             if (product != null)
                 RemoveProductWithId(product.id);
         }
-        Product? GetProduct(long id);
-        void UpdateProductWithIt(long id, Product product);
+        Product? GetProduct(long? id);
+        void UpdateProductWithId(long id, Product product);
     }
 }

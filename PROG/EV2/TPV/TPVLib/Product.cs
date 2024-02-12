@@ -1,18 +1,42 @@
-﻿namespace TPVLib
+﻿using Microsoft.VisualBasic;
+
+namespace TPVLib
 {
     public class Product
     {
         public enum Availability
         {
             AVAILABLE,
-            NOTAVAILABLEs
+            NOTAVAILABLE
         }
-        public string name;
-        public string description;
-        public double precio;
-        public int stock;
-        public long id;
-        public double IVA;
-        public Availability availability;
+        public string name { get; set; }
+        public string description { get; set; }
+        public double precio { get; set; }
+        public int stock { get; set; }
+        public long id { get; set; }
+        public double IVA { get; set; }
+        public Availability availability { get; set; }
+        //public var image { get; set; }
+        public Product Clone(Product copy)
+        {
+            copy.name = name;
+            copy.description = description;
+            copy.precio = precio;
+            copy.stock = stock;
+            copy.id = id;
+            copy.IVA = IVA;
+            copy.availability = availability;
+            //copy.image = image;
+            return copy;
+        }
+        public void RewriteProduct(Product product)
+        {
+            name = product.name;
+            description = product.description;
+            precio = product.precio;
+            IVA = product.IVA;
+            id = product.id;
+            availability = product.availability;
+        }
     }
 }
