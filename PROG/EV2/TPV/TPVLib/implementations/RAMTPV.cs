@@ -7,9 +7,9 @@ namespace TPVLib
         public int CurrentIdCount = 1;
         public long? AddProduct(Product product)
         {
-            Product clone = product.Clone(product);
             if (product == null)
                 return null;
+            Product clone = product.Clone(product);
             clone.id = CurrentIdCount++;
             return CurrentIdCount;
         }
