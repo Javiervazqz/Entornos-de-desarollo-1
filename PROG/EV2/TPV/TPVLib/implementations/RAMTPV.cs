@@ -26,7 +26,7 @@ namespace TPVLib
             return null;
         }
 
-        public void RemoveProductWithId(long id)
+        public void RemoveProductWithId(long? id)
         {
             if (id == null)
                 return;
@@ -46,7 +46,7 @@ namespace TPVLib
             {
                 if (_products[i].id == id)
                 {
-                    _products[i].RewriteProduct(product);
+                    _products[i].Update(product);
                     return;
                 }
             }

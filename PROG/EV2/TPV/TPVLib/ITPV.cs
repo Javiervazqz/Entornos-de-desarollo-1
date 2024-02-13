@@ -7,7 +7,7 @@
             return new RAMTPV();
         }
         long? AddProduct(Product product);
-        void RemoveProductWithId(long id);
+        void RemoveProductWithId(long? id);
         void RemoveProduct(Product product)
         {
             if (product != null)

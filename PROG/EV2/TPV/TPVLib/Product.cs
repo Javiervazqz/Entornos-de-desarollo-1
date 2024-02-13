@@ -29,7 +29,7 @@ namespace TPVLib
             //copy.image = image;
             return copy;
         }
-        public void RewriteProduct(Product product)
+        public void Update(Product product)
         {
             name = product.name;
             description = product.description;
