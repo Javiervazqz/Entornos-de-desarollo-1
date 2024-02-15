@@ -37,6 +37,7 @@ namespace TPVLib
             IVA = product.IVA;
             id = product.id;
             availability = product.availability;
+            //image = product.image;
         }
     }
 }

@@ -10,7 +10,7 @@ namespace TPV
         }
         public int ReadOption()
         {
-            string a = Console.ReadKey().Key;
+
         }
     }
 }
