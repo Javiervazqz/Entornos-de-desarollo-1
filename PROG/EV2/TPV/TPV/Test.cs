@@ -12,7 +12,6 @@ namespace TPV
             {
                 Console.WriteLine("1 - Buscar producto");
                 Console.WriteLine("2 - Introducir producto");
-                Console.WriteLine("3 - ");
                 var option = UI.ReadOption();
             }
         }
