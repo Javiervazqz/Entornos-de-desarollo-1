@@ -4,7 +4,7 @@ namespace TPVLib
 {
     public class TicketHeader
     {
-        string _barcode;
-        long id;
+        public string _barcode;
+        public long id;
     }
 }

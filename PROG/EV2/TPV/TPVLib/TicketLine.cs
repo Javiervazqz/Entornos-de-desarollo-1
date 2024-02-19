@@ -4,8 +4,8 @@ namespace TPVLib
 {
     public class TicketLine
     {
-        Product product;
-        string barScan { get; set; }
-        string date;
+        public Product product;
+        public string barScan { get; set; }
+        public string date;
     }
 }
