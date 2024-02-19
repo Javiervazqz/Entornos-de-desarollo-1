@@ -34,8 +34,9 @@ namespace TPVLib
             name = product.name;
             description = product.description;
             precio = product.precio;
-            IVA = product.IVA;
+            stock = product.stock;
             id = product.id;
+            IVA = product.IVA;
             availability = product.availability;
             //image = product.image;
         }

@@ -4,7 +4,7 @@ namespace TPV
 {
     public class Test
     {
-        static void Main(string[] args)
+        public static void Start()
         {
             ITPV tpv = ITPV.CreateNewTPV();
             bool isRunning = true;

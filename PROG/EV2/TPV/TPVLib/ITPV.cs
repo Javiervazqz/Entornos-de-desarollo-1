@@ -15,7 +15,7 @@
         }
         Product? GetProduct(long? id);
         void UpdateProductWithId(long id, Product product);
-        void AddTicket(Ticket ticket);
-        void RemoveTicket(long index);
+        long AddTicket(Ticket ticket);
+        void RemoveTicket(Ticket ticket);
     }
 }

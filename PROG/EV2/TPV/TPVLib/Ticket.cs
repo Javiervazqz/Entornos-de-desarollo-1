@@ -4,8 +4,7 @@ namespace TPVLib
 {
     public class Ticket
     {
-        List<Product> _products = new List<Product>();
-        public string ScanBar { get; set; }
-
+        public TicketHeader header = new TicketHeader();
+        public TicketBody body = new TicketBody();
     }
 }
