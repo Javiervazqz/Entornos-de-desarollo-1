@@ -13,12 +13,13 @@ namespace TPVLib
         public string description { get; set; }
         public double precio { get; set; }
         public int stock { get; set; }
-        public long id { get; set; }
+        public int id { get; set; }
         public double IVA { get; set; }
         public Availability availability { get; set; }
-        //public var image { get; set; }
-        public Product Clone(Product copy)
+        //private var image { get; set; }
+        public Product Clone()
         {
+            Product copy = new Product();
             copy.name = name;
             copy.description = description;
             copy.precio = precio;

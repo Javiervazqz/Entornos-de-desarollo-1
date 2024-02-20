@@ -8,41 +8,30 @@ namespace TPVLib
         public int CurrentIdCount = 1;
         private IDatabase _database;
         public long? AddProduct(Product product)
-        {
-            if (product == null)
-                return null;
-            Product clone = product.Clone(product);
-            clone.id = CurrentIdCount++;
-            return CurrentIdCount;
+        {-
         }
 
-        public Product? GetProduct(long? id)
+        public Product? GetProduct(int? id)
         {
             if (id == null)
                 return null;
             for (int i = 0; i < ProductCount; i++)
             {
                 if (id == _products[i].id)
-                    return _products[i].Clone(_products[i]);
+                    return _products[i].Clone();
             }
-            return null;
+            throw new Exception("Product wasn't found");
         }
 
-        public void RemoveProductWithId(long? id)
+        public void RemoveProductWithId(int id)
         {
-            if (id == null)
-                return;
-            for (int i = 0; i < ProductCount; i++)
-            {
-                if (id == _products[i].id)
-                {
-                    _products.Remove(_products[i]);
-                    return;
-                }
-            }
+            if (id == null || id <= 0)
+                throw new Exception("Product wasn't found");
+            _products.Remove(_products[id]);
+            
         }
 
-        public void UpdateProductWithId(long id, Product product)
+        public void UpdateProductWithId(int id, Product product)
         {
             for (int i = 0; i < ProductCount; i++)
             {
@@ -59,7 +48,7 @@ namespace TPVLib
             try
             {
                 _database.BeginTransaction();
-                long id = _database.AddTicket(ticket.header);
+                int id = _database.AddTicket(ticket.header);
                 foreach(var line in ticket.body.Lines)
                 {
                     _database.AddTicketLine(id, line);
