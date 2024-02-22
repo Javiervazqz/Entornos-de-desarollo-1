@@ -7,11 +7,15 @@ namespace TPVLib
         public int ProductCount => _products.Count;
         public int CurrentIdCount = 1;
         private IDatabase _database;
-        public long? AddProduct(Product product)
-        {-
+        public int? AddProduct(Product product)
+        {
+            if (product == null)
+                return -1;
+            _products.Add(product);
+            return product.id;
         }
 
-        public Product? GetProduct(int? id)
+        public Product? GetProduct(int id)
         {
             if (id == null)
                 return null;
@@ -43,7 +47,7 @@ namespace TPVLib
             }
         }
 
-        public long AddTicket(Ticket ticket)
+        public int AddTicket(Ticket ticket)
         {
             try
             {
