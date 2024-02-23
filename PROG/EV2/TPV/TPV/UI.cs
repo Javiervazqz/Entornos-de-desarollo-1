@@ -10,7 +10,8 @@ namespace TPV
         }
         public int ReadOption()
         {
-
+            int res = Console.ReadLine();
+            return res;
         }
     }
 }
