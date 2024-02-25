@@ -2,6 +2,7 @@
 
 namespace DamLib
 {
+    public delegate bool Filter<T>(T item, int hash);
     public class SetWithHash<T>
     {
         private T[] _set = new T[0];
@@ -82,6 +83,10 @@ namespace DamLib
             {
                 Console.WriteLine(_set[i]);
             }
+        }
+        public Set<T> Filter(Set<T> item)
+        {
+
         }
     }
 }
