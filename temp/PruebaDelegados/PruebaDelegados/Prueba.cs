@@ -31,6 +31,7 @@ namespace PruebaDelegados
                 {
                     case 1:
                         result = Calculadora((v1, v2) => v1 + v2);
+                        { Prueba }
                         Console.Write(result);
                         break;
                     case 2:
