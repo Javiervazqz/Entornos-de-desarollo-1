@@ -84,9 +84,9 @@ namespace DamLib
                 Console.WriteLine(_set[i]);
             }
         }
-        public Set<T> Filter(Set<T> item)
-        {
+        //public Set<T> Filter(Set<T> item)
+        //{
 
-        }
+        //}
     }
 }
