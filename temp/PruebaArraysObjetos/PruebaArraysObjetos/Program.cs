@@ -4,13 +4,15 @@
     {
         static void Main(string[] args)
         {
-            Perro[] arrayPerros = new Perro[3];
-            arrayPerros[0] = new Perro("juan");
-            arrayPerros[1] = new Dalmata("juanito");
-            arrayPerros[2] = new Perro("juan");
+            Perro[] arrayPerros = new Perro[4];
+            arrayPerros[0] = new Perro("Juan");
+            arrayPerros[1] = new Dalmata("Juanito");
+            arrayPerros[2] = new Perro("Juan");
+            arrayPerros[3] = new Perro();
             arrayPerros[0].Ladrar();
             arrayPerros[1].Ladrar();
             arrayPerros[2].Ladrar();
+            arrayPerros[3].Ladrar();
         }
         public class Perro
         {
@@ -18,6 +20,10 @@
             public Perro(string name)
             {
                 this.name = name;
+            }
+            public Perro()
+            {
+                this.name = "Max";
             }
             public virtual void Ladrar()
             {
