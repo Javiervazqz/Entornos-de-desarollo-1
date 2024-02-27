@@ -1,4 +1,6 @@
-﻿namespace PruebaArraysObjetos
+﻿using System.Threading.Channels;
+
+namespace PruebaArraysObjetos
 {
     internal class Program
     {
@@ -9,26 +11,26 @@
             arrayPerros[1] = new Dalmata("Juanito");
             arrayPerros[2] = new Perro("Juan");
             arrayPerros[3] = new Perro();
-            arrayPerros[0].Ladrar();
-            arrayPerros[1].Ladrar();
-            arrayPerros[2].Ladrar();
-            arrayPerros[3].Ladrar();
+            Console.WriteLine(arrayPerros[0]);
+            arrayPerros[1].Name = "Javiercin";
+            Console.WriteLine(arrayPerros[1]);
+            Console.WriteLine(arrayPerros[2]);
+            Console.WriteLine(arrayPerros[3]);
         }
         public class Perro
         {
-            protected string name; 
+            public string Name { get; set; } 
             public Perro(string name)
             {
-                this.name = name;
+                Name = name;
             }
             public Perro()
             {
-                this.name = "Max";
+                Name = "Max";
             }
-            public virtual void Ladrar()
+            public override string ToString()
             {
-                
-                Console.WriteLine($"Guau, soy {name}");
+                return $"Guau, soy {Name}";
             }
         }
         public class Dalmata : Perro
@@ -37,10 +39,9 @@
             {
 
             }
-            public override void Ladrar()
+            public override string ToString()
             {
-                base.Ladrar();
-                Console.WriteLine($"Auuu, soy {name}");
+                return base.ToString() + " y soy un dalmata";
             }
         }
     }
