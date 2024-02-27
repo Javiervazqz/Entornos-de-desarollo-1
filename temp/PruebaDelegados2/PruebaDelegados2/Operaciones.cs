@@ -19,7 +19,6 @@ namespace PruebaDelegados2
         }
         public static void Sumar()
         {
-            (int v1, int v2) = GetValues();
             int result = AsignarOperar((v1, v2) => v1 + v2);
             Console.WriteLine(result);
         }
