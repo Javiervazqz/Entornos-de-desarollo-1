@@ -4,9 +4,10 @@ namespace LibraryOOP
 {
     public class User
     {
-        string DNI, fullName, address, phoneNum;
+        string DNI, address, phoneNum;
         public bool IsSanctionated { get; set; }
-        Loans[] loans = new Loans[5];
+        Loan[] loans = new Loan[5];
+        public string fullName { get; set; }
         public User(string dni, string nombre, string direccion, string numtlf)
         {
             DNI = dni;

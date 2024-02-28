@@ -2,7 +2,7 @@
 
 namespace LibraryOOP
 {
-    public class Loans
+    public class Loan
     {
         int codProductLent;
         DateTime loanDate;
