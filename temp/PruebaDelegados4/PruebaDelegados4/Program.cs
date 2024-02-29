@@ -1,4 +1,6 @@
-﻿namespace PruebaDelegados4
+﻿using System.Security.Cryptography.X509Certificates;
+
+namespace PruebaDelegados4
 {
     internal class Program
     {
@@ -12,10 +14,11 @@
 
             Sumatron suma = new Sumatron((int v1, int v2) =>
             {
+                v1 = 5;
                 return v1 + v2;
             });
             Console.WriteLine(suma(1, 4));
-
+    
 
 
 
