@@ -1,8 +1,9 @@
 ﻿using System;
-using System.Reflection.Metadata.Ecma335;
 
 namespace NodosArbol
 {
+    public delegate void VisitDelegate<T>(Node<T> visitor);
+    public delegate bool CheckDelegate<T>(Node<T> node);
     public class Node<T>
     {
         public T content;
@@ -14,8 +15,6 @@ namespace NodosArbol
         public bool IsLeaf => this.ChildCount == 0;
         public int Level => GetLevel();
         public Node<T> Root => GetRoot();
-        public delegate void VisitDelegate<T>(Node<T> visitor);
-        public delegate bool CheckDelegate<T>(Node<T> node);
         public int GetLevel()
         {
             if (this == null)
