@@ -4,7 +4,7 @@ namespace DamLib
 {
     public class Queue<T>
     {
-        T[] _queue = new T[1];
+        T[] _queue = new T[0];
         public int Count => _queue.Length;
         public T? First
         {
@@ -12,36 +12,59 @@ namespace DamLib
             {
                 if (Empty)
                     return default(T);
-                return _queue[1];
+                return _queue[0];
             }
         }
-        public T? First2 => Empty ? default(T) : _queue[1]; // Son iguales los dos First, solo cambia el syntax
+        public T? First2 => Empty ? default(T) : _queue[0]; // Son iguales los dos First, solo cambia el syntax
         public T Last => _queue[_queue.Length - 1];
         public bool Empty => _queue[1] == null;
-        public void ToQueue (T newelement)
+        //public void ToQueue (T newelement)
+        //{
+        //    if (newelement == null)
+        //        return;
+        //    T[] _queue = new T[Count + 1];
+        //    for (int i = 0; i <= this._queue.Length - 1; i++)
+        //    {
+        //        _queue[i] = this._queue[i];
+        //        if (i == this._queue.Length - 1)
+        //            _queue[i + 1] = newelement;
+        //    }
+        //     this._queue = _queue;
+        //}
+        public void ToQueue(T element)
         {
-            if (newelement == null)
+            if (element == null)
                 return;
-            T[] _queue = new T[Count + 1];
-            for (int i = 0; i <= this._queue.Length - 1; i++)
+            T[] values = new T[Count + 1];
+            for (int i = 0; i < Count; i++)
             {
-                _queue[i] = this._queue[i];
-                if (i == this._queue.Length - 1)
-                    _queue[i + 1] = newelement;
+                values[i] = _queue[i];
             }
-             this._queue = _queue;
+            values[values.Length - 1] = element;
+            _queue = values;
         }
+#nullable disable
+        //public void DeQueue()
+        //{
+        //    T[] _queue = new T[Count - 1];
+        //    for (int i = _queue.Length - 1; i >= 0; i--)
+        //    {
+        //        _queue[i] = this._queue[i];
+        //        if (i == 0)
+        //            _queue[0] = default(T);
+        //    }
+        //    this._queue = _queue;
+        //}
+#nullable enable
 #nullable disable
         public void DeQueue()
         {
-            T[] _queue = new T[Count - 1];
-            for (int i = _queue.Length - 1; i >= 0; i--)
+            T[] values = new T[Count - 1];
+            for (int i = 0; i < Count - 1; ++i)
             {
-                _queue[i] = this._queue[i];
-                if (i == 0)
-                    _queue[0] = default(T);
+                values[i] = _queue[i];
             }
-            this._queue = _queue;
+            _queue = values;
         }
 #nullable enable
         public void PrintQueue()
