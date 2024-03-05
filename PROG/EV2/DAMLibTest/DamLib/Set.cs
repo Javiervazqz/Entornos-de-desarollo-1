@@ -2,9 +2,9 @@
 
 namespace DamLib
 {
-    public class Set<T>
+    public class Set<T> : ISet<T>
     {
-        private T[] _set = new T[1];
+        private T[] _set = new T[0];
         //public override bool Equals(object? obj) sobreescribir el equals de objeto
         //{
         //    if (this == obj)
@@ -29,25 +29,35 @@ namespace DamLib
         {
             if (element == null)
                 return -1;
-            for (int i = 0; i < Count - 1; i++)
+            if (Count == 0)
+                return 0;
+            for (int i = 0; i < Count; i++)
             {
                 if (_set[i].Equals(element))
                     return i;
             }
             return -1;
         }
-        public void Add(T newElement)
+        public bool Contains(T element)
         {
-            T[] ArrayTemporal = new T[Count + 1];
-            if (newElement == null || Contains(newElement))
-                return;
-            for (int i = 0; i <= this._set.Length - 1; i++)
+            for (int i = 0; i < Count; i++)
             {
-                ArrayTemporal[i] = this._set[i];
-                if (i == this._set.Length - 1)
-                    ArrayTemporal[Count] = newElement;
+                if (_set[i].Equals(element))
+                    return true;
             }
-            this._set = ArrayTemporal;
+            return false;
+        }
+        public void Add(T element)
+        {
+            if (element == null || Contains(element))
+                return;
+            T[] values = new T[Count + 1];
+            for (int i = 0; i < Count; i++)
+            {
+                values[i] = _set[i];
+            }
+            values[values.Length - 1] = element;
+            _set = values;
         }
         public void Remove(T element)
         {
@@ -65,16 +75,18 @@ namespace DamLib
             }
             _set = ArrayTemporal;
         }
-        public bool Contains(T element)
-        {
-            return IndexOf(element) < 0;
-        }
         public void PrintSet()
         {
             for (int i = 0; i < _set.Length; i++)
             {
                 Console.WriteLine(_set[i]);
             }
+        }
+
+        public void Clear()
+        {
+            T[] temp = new T[Count];
+            _set = temp;
         }
     }
 }
