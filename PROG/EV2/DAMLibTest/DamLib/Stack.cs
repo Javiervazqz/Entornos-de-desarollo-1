@@ -2,7 +2,7 @@
 {
     public class Stack<T>
     {
-        private T[] _stack = new T[1];
+        private T[] _stack = new T[0];
         public void Push(T newelement)
         {
             if (newelement == null)
@@ -26,12 +26,14 @@
         public T GetTop() => _stack[_stack.Length - 1];
         public bool IsEmpty() => _stack.Length == 0;
         public int GetCount() => _stack.Length;
-        public void PrintStack()
+        public override string ToString()
         {
+            string stringStack = "";
             for (int i = 0; i < _stack.Length; i++)
             {
-                Console.WriteLine(_stack[i]);
+                stringStack = stringStack + _stack[i] + " ";
             }
+            return stringStack;
         }
     }
 }
