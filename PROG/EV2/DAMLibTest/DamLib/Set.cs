@@ -59,21 +59,39 @@ namespace DamLib
             values[values.Length - 1] = element;
             _set = values;
         }
+        //public void Remove(T element)
+        //{
+        //    if (!Contains(element))
+        //        return;
+        //    T[] ArrayTemporal = new T[Count - 1];
+        //    int position = IndexOf(element);
+        //    for (int i = 0, j = 0; i < Count; i++,j++)
+        //    {
+        //        if (i == position)
+        //        {
+        //            j++;
+        //        }
+        //        ArrayTemporal[i] = _set[j];
+        //    }
+        //    _set = ArrayTemporal;
+        //}
         public void Remove(T element)
         {
-            if (!Contains(element))
+            int index = IndexOf(element);
+            if (!Contains(element) || index < 0)
                 return;
-            T[] ArrayTemporal = new T[Count - 1];
-            int position = IndexOf(element);
-            for (int i = 0, j = 0; i < Count; i++,j++)
+            T[] values = new T[Count - 1];
+            for (int i = 0; i < index; i++)
             {
-                if (i == position)
-                {
-                    j++;
-                }
-                ArrayTemporal[i] = _set[j];
+                values[i] = _set[i];
             }
-            _set = ArrayTemporal;
+            int j = index;
+            for (int i = index + 1; i <= values.Length; i++)
+            {
+                values[j] = _set[i];
+                j++;
+            }
+            _set = values;
         }
         public void PrintSet()
         {

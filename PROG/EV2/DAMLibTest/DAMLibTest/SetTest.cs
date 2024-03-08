@@ -36,6 +36,9 @@ namespace DamLibTest
             set1.Add("Jose Mari");
             set1.Add("Jose Manuel");
             set1.Add("Josetrix");
+            set1.Add("Javiercin");
+            set1.Add("Jesucristo");
+            set1.Remove("Jose Manuel");
             set1.PrintSet();
         }
     }

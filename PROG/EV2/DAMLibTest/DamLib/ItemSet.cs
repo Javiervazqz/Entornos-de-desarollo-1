@@ -9,7 +9,7 @@ namespace DamLib
         private class Item
         {
             public T? Element;
-            public int Hash;
+            public long Hash;
         }
         Item[] _items = new Item[0];
         public int IndexOf(T element)
