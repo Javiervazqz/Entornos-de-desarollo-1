@@ -19,10 +19,6 @@ namespace DamLib
         public int Count => Empty ? 0 : _set.Length;
         public int IndexOf(T element)
         {
-            if (element == null)
-                return -1;
-            if (Count == 0)
-                return 0;
             for (int i = 0; i < Count; i++)
             {
                 if (_set[i].Equals(element))
@@ -41,16 +37,11 @@ namespace DamLib
         }
         public bool Contains(T element)
         {
-            for (int i = 0; i < Count; i++)
-            {
-                if (_set[i].Equals(element))
-                    return true;
-            }
-            return false;
+            return IndexOf(element) >= 0;
         }
         public void Add(T element)
         {
-            if (element == null || Contains(element))
+            if (Contains(element))
                 return;
             T[] values = new T[Count + 1];
             for (int i = 0; i < Count; i++)
@@ -85,7 +76,6 @@ namespace DamLib
                 Console.WriteLine(_set[i]);
             }
         }
-
         public void Clear()
         {
             T[] temp = new T[Count];

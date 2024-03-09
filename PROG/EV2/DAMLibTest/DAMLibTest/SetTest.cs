@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Channels;
 
 namespace DamLibTest
 {
@@ -36,10 +37,8 @@ namespace DamLibTest
             set1.Add("Jose Mari");
             set1.Add("Jose Manuel");
             set1.Add("Josetrix");
-            set1.Add("Javiercin");
-            set1.Add("Jesucristo");
-            set1.Remove("Jesucristo");
             set1.PrintSet();
+            Console.WriteLine(set1.IndexOf("Josetrix"));
         }
     }
 }
