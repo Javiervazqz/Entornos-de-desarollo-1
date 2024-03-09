@@ -14,15 +14,7 @@ namespace DamLib
         //    Set<T> s = (Set<T>)obj;
         //    return s._set == _set;
         //}
-        public T[] Clone(T[] arr1)
-        {
-            T[] arr2 = new T[arr1.Length];
-            for (int i = 0; i < arr1.Length; i++)
-            {
-                arr1[i] = arr2[i];
-            }
-            return arr2;
-        }
+     
         public bool Empty => _set.Length < 0;
         public int Count => Empty ? 0 : _set.Length;
         public int IndexOf(T element)
@@ -37,6 +29,15 @@ namespace DamLib
                     return i;
             }
             return -1;
+        }
+        public T[] Clone(T[] arr1)
+        {
+            T[] arr2 = new T[Count];
+            for (int i = 0; i < Count; i++)
+            {
+                arr1[i] = arr2[i];
+            }
+            return arr2;
         }
         public bool Contains(T element)
         {
@@ -59,22 +60,6 @@ namespace DamLib
             values[values.Length - 1] = element;
             _set = values;
         }
-        //public void Remove(T element)
-        //{
-        //    if (!Contains(element))
-        //        return;
-        //    T[] ArrayTemporal = new T[Count - 1];
-        //    int position = IndexOf(element);
-        //    for (int i = 0, j = 0; i < Count; i++,j++)
-        //    {
-        //        if (i == position)
-        //        {
-        //            j++;
-        //        }
-        //        ArrayTemporal[i] = _set[j];
-        //    }
-        //    _set = ArrayTemporal;
-        //}
         public void Remove(T element)
         {
             int index = IndexOf(element);
