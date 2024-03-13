@@ -4,7 +4,7 @@
     {
         public override Ficha MakeMove()
         {
-            throw new NotImplementedException();
+
         }
     }
 }
