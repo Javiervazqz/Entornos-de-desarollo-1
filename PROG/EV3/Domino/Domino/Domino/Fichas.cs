@@ -2,7 +2,7 @@
 {
     public class Fichas
     {
-        List<Ficha> fichas = new List<Ficha>();
+        List<Ficha> _fichas = new List<Ficha>();
 
         public bool Contains(Ficha ficha)
         {
@@ -10,9 +10,9 @@
         }
         public int IndexOf(Ficha ficha)
         {
-            for(int i = 0; i < fichas.Count; i++)
+            for(int i = 0; i < _fichas.Count; i++)
             {
-                if (ficha == fichas[i])
+                if (ficha == _fichas[i])
                     return i;
             }
             return -1;

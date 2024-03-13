@@ -2,9 +2,9 @@
 {
     public class Game
     {
-        List<Player> players = new List<Player>();
-        Fichas deck = new Fichas();
-        Player winner = new Player();
+        List<Player> _players = new List<Player>();
+        Fichas _deck = new Fichas();
+        Player _winner;
 
         public void Iniciar()
         {
