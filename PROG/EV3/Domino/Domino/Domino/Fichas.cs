@@ -2,7 +2,7 @@
 {
     public class Fichas
     {
-        List<Ficha> _fichas = new List<Ficha>();
+        protected List<Ficha> _fichas = new List<Ficha>();
 
         public bool Contains(Ficha ficha)
         {
