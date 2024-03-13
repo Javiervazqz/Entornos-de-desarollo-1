@@ -6,15 +6,20 @@
         List<Ficha> _tableDeck = new List<Ficha>();
         List<Ficha> _deck = new List<Ficha>();
         Random rnd = new Random();
-        Player _winner;
+        public Player Winner;
 
         public void Iniciar()
         {
-
+            CreateDeck();
+            BarajarFichas();
+            RepartirFichas();
         }
         public void Restart()
         {
-
+            _tableDeck.Clear();
+            _deck.Clear();
+            Winner = null;
+            Iniciar();
         }
         public bool Contains(Ficha ficha)
         {
@@ -35,6 +40,7 @@
             {
                 _players[j].ficha = _deck[i];
                 _tableDeck.Add(_deck[i]);
+                _deck.Remove(_deck[i]);
             }
         }
         public void BarajarFichas()
@@ -47,6 +53,16 @@
                 Ficha value = _deck[v];
                 _deck[v] = _deck[n];
                 _deck[n] = value;
+            }
+        }
+        private void CreateDeck()
+        {
+            for (int i = 0; i <= 6; i++)
+            {
+                for (int j = i; j <= 6; j++)
+                {
+                    _deck.Add(new Ficha(i, j));
+                }
             }
         }
     }
