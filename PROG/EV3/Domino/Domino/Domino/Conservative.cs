@@ -2,9 +2,11 @@
 {
     public class Conservative : Player
     {
-        public override Ficha MakeMove()
-        {
+        public Conservative(string name) : base(name) { }
 
-        }
+        //public override Ficha MakeMove()
+        //{
+
+        //}
     }
 }

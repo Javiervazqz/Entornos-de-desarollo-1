@@ -2,9 +2,11 @@
 {
     public class Impulsive : Player
     {
-        public override Ficha MakeMove()
-        {
+        public Impulsive(string name) : base(name) { }
 
-        }
+        //public override Ficha MakeMove()
+        //{
+
+        //}
     }
 }
