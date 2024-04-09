@@ -4,8 +4,8 @@
     {
         static void Main(string[] args)
         {
-            string path = "path";
-
+            UI ui = new UI();
+            string[]? paths = ui.GetPaths();
         }
     }
 }
