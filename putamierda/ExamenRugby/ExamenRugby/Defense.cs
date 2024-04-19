@@ -8,6 +8,14 @@
         public override void ExecuteAction(Game game, Ball ball)
         {
             List<Character> list = game.characters;
+            List<Character> allies = new List<Character>();
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (this.team == list[i].team)
+                {
+                    allies.Add(list[i]);
+                }
+            }
             if(HasBall)
             {
                 utils = new Utils();
@@ -16,7 +24,7 @@
                 {
                     (int v1, int v2) targetBox = (utils.GenerateIntBetween(0, 2), utils.GenerateIntBetween(0, 2));
                     bool validBox = true;
-                    foreach (Character character in list)
+                    foreach (Character character in allies)
                     {
                         if (character.x == targetBox.v1 && character.y == targetBox.v2)
                         {
@@ -28,11 +36,10 @@
                         this.x = targetBox.v1;
                         this.y = targetBox.v2;
                     }
-
                 }
                 else //pasar
                 {
-                    Character passTarget = list[utils.GenerateIntBetween(0, list.Count)];
+                    Character passTarget = allies[utils.GenerateIntBetween(0, allies.Count)];
                     bool missedPass = true;
                     double value = utils.GenerateDouble();
                     if (0.20 <= value || value <= 0.80) //consigue pasar y se recibe el pase

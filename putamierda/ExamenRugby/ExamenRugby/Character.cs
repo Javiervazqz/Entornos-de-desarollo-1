@@ -9,6 +9,7 @@
         public string? Name { get; set; }
         public double Skill { get; set; }
         public Utils utils;
+        public Team team;
         public Character(string equipo, string nombre)
         {
             Team = equipo;

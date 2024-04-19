@@ -4,7 +4,11 @@
     {
         public List<Character> characters;
         public int RoundCount { get; set; }
+        
+        public void SeparateCharacters()
+        {
 
+        }
         public void GenerateCharacters()
         {
             characters = new List<Character>();
