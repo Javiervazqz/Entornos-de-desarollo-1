@@ -16,7 +16,7 @@
                     allies.Add(list[i]);
                 }
             }
-            if(HasBall)
+            if (HasBall)
             {
                 utils = new Utils();
                 double decision = utils.GenerateDouble();
@@ -55,7 +55,7 @@
                         ball.x = utils.GenerateIntBetween(x, x + 2);
                         ball.y = utils.GenerateIntBetween(y, y + 2);
                     }
-                }               
+                }
             }
         }
     }
