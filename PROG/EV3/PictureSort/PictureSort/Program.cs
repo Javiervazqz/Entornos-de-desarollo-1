@@ -4,8 +4,13 @@
     {
         static void Main(string[] args)
         {
-            UI ui = new UI();
-            string[]? paths = ui.GetPaths();
+            UI.ShowTitle();
+            UI.ShowProcessingMessage();
+
+
+
+
+            UI.ShowCompletionMessage();
         }
     }
 }
