@@ -5,7 +5,7 @@ VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfStudents", "WpfStudents\WpfStudents.csproj", "{9018EE73-0322-480A-88D5-8D553C8C4C6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database", "Database\Database.csproj", "{0E8EF8A8-2121-4085-8AFE-21C4318558C1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationModel", "Database\ApplicationModel.csproj", "{0E8EF8A8-2121-4085-8AFE-21C4318558C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
