@@ -14,21 +14,21 @@
 
         public Student GetStudentAt(int index)
         {
-            try
-            {
-                if (index < 0 || index == null)
-                    throw new ArgumentOutOfRangeException("index");
-                return _students[index];
-            }
-            catch(Exception ex) 
-            {
-                
-            }
+            if (index < 0 || index >= Count)
+                return default;
+            return _students[index];
         }
 
         public Student GetStudentWithId(long id)
         {
-            throw new NotImplementedException();
+            if (id < 0)
+                return default;
+            for(int i = 0; i < Count; i++)
+            {
+                if (_students[i].Id == id)
+                    return _students[i];
+            }
+            return default;
         }
 
         public void RemoveStudent(Student student)
@@ -38,15 +38,21 @@
 
         public void RemoveStudentWithId(long id)
         {
-            for (int i = 0; i < Count; i++)
+            var student = GetStudentWithId(id);
+            for(int i = 0; i < Count; i++)
             {
-
+                if (id == _students[i].Id)
+                    _students.RemoveAt(i);
             }
         }
 
         public void UpdateStudent(long id, Student student)
         {
-            throw new NotImplementedException();
+            var std = GetStudentWithId(id);
+            std.Id = student.Id;
+            std.Name = student.Name;
+            std.Description = student.Description;
+            std.Age = student.Age;
         }
     }
 }
