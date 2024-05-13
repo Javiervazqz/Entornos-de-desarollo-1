@@ -1,5 +1,7 @@
-﻿using System;
+﻿using ApplicationModel;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,16 +17,33 @@ using System.Windows.Shapes;
 
 namespace Wallapop
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
+        public ObservableCollection<Product> Products { get; set; } = new ObservableCollection<Product>();
         public MainWindow()
         {
             InitializeComponent();
-            Items.Add(new Item { Name = "Artículo 1", Description = "Descripción del artículo 1" });
-            Items.Add(new Item { Name = "Artículo 2", Description = "Descripción del artículo 2" });
+
+            Products.Add(new Product { Name = "Artículo 1", Description = "Descripción del artículo 1" });
+            Products.Add(new Product { Name = "Artículo 2", Description = "Descripción del artículo 2" });
+
+
+            DataContext = this;
+
+        }
+        private List<Product> LoadProducts()
+        {
+            // Aquí cargarías los productos desde tu fuente de datos
+            // Por ejemplo, desde una base de datos o un archivo
+            // Devuelve una lista de productos con las rutas de imagen
+        }
+        private BitmapImage LoadImage(string imagePath)
+        {
+            BitmapImage image = new BitmapImage();
+            image.BeginInit();
+            image.UriSource = new Uri(imagePath, UriKind.RelativeOrAbsolute);
+            image.EndInit();
+            return image;
         }
     }
 }

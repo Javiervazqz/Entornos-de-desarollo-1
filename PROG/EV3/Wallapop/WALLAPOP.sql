@@ -1,0 +1,17 @@
+CREATE DATABASE WALLAPOP ON PRIMARY 
+(
+	NAME='WALLAPOP',
+	FILENAME='C:\Users\javvazgar\Documents\GitHub\Entornos-de-desarollo-1\PROG\EV3\Wallapop\DATABASE\WALLAPOP.mdf',
+	SIZE=10MB,
+	MAXSIZE='Unlimited',
+	FILEGROWTH=10%
+)
+USE WALLAPOP
+DROP DATABASE WALLAPOP
+use master
+CREATE TABLE PRODUCT (
+	Name VARCHAR(250),
+	Description VARCHAR(2500),
+	Price DECIMAL(9, 2),
+	ImagePath VARCHAR(500)
+)
