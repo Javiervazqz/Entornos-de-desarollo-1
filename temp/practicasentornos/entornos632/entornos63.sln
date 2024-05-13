@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "entornos63", "entornos63\entornos63.csproj", "{EA93BB52-C91B-4A71-ADDB-B4AB60E0A603}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject1", "TestProject1\TestProject1.csproj", "{1EDD88ED-F8A7-4F97-A4EB-73F52B5D6411}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA93BB52-C91B-4A71-ADDB-B4AB60E0A603}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA93BB52-C91B-4A71-ADDB-B4AB60E0A603}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA93BB52-C91B-4A71-ADDB-B4AB60E0A603}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA93BB52-C91B-4A71-ADDB-B4AB60E0A603}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EDD88ED-F8A7-4F97-A4EB-73F52B5D6411}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EDD88ED-F8A7-4F97-A4EB-73F52B5D6411}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EDD88ED-F8A7-4F97-A4EB-73F52B5D6411}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EDD88ED-F8A7-4F97-A4EB-73F52B5D6411}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E3044357-4225-469F-9CC6-19336C98E520}
+	EndGlobalSection
+EndGlobal

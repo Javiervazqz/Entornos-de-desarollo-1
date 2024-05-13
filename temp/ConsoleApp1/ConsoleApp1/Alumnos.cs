@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Channels;
 using System.Threading.Tasks;
 
 namespace ConsoleApp1
@@ -43,6 +44,14 @@ namespace ConsoleApp1
 
         // Agrega un nuevo alumno a la lista
         //        
+        public void MostrarAlumnos()
+        {
+            for (int i = 0; i < Longitud(); i++)
+            {
+                Console.WriteLine(listaAlumnos[i]);
+            }
+        }
+        public int Longitud() => listaAlumnos.Count;
         public void Agregar(Alumno alu)
         {
             listaAlumnos.Add(alu);
