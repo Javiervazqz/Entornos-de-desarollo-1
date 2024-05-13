@@ -23,6 +23,8 @@ namespace Wallapop
         public MainWindow()
         {
             InitializeComponent();
+            Items.Add(new Item { Name = "Artículo 1", Description = "Descripción del artículo 1" });
+            Items.Add(new Item { Name = "Artículo 2", Description = "Descripción del artículo 2" });
         }
     }
 }
