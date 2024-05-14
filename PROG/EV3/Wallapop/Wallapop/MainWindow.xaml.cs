@@ -19,7 +19,7 @@ namespace Wallapop
 {
     public partial class MainWindow : Window
     {
-        public ObservableCollection<Product> Products { get; set; } = new ObservableCollection<Product>();
+        public List<Product> Products { get; set; } = new List<Product>();
         public MainWindow()
         {
             InitializeComponent();
@@ -31,12 +31,12 @@ namespace Wallapop
             DataContext = this;
 
         }
-        private List<Product> LoadProducts()
-        {
+        //private List<Product> LoadProducts()
+        //{
             // Aquí cargarías los productos desde tu fuente de datos
             // Por ejemplo, desde una base de datos o un archivo
             // Devuelve una lista de productos con las rutas de imagen
-        }
+        //}
         private BitmapImage LoadImage(string imagePath)
         {
             BitmapImage image = new BitmapImage();
