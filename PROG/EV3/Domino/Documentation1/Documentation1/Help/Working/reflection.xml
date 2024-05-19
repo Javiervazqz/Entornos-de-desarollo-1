@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<reflection>
+  <assemblies>
+    <assembly name="ProyectoDocumentacion">
+      <assemblydata version="1.0.0.0" culture="" key="" hash="SHA1" />
+      <attributes>
+        <attribute>
+          <type api="T:System.Reflection.AssemblyFileVersionAttribute" ref="true" />
+          <argument>
+            <type api="T:System.String" ref="true" />
+            <value>1.0.0.0</value>
+          </argument>
+        </attribute>
+      </attributes>
+    </assembly>
+  </assemblies>
+  <apis>
+    <api id="N:ProyectoTrabajador">
+      <topicdata group="api" />
+      <apidata name="ProyectoTrabajador" group="namespace" />
+      <elements>
+        <element api="T:ProyectoTrabajador.Trabajador" />
+      </elements>
+      <file name="c13ed4b2-d275-e9d3-437f-e2b09f19f585" />
+    </api>
+    <api id="T:ProyectoTrabajador.Trabajador">
+      <topicdata group="api" />
+      <apidata name="Trabajador" group="type" subgroup="class" />
+      <typedata visibility="public" serializable="false" defaultConstructor="M:ProyectoTrabajador.Trabajador.#ctor" />
+      <family>
+        <ancestors>
+          <type api="T:System.Object" ref="true" />
+        </ancestors>
+      </family>
+      <elements>
+        <element api="M:ProyectoTrabajador.Trabajador.#ctor" />
+        <element api="Overload:ProyectoTrabajador.Trabajador.CalculoAnyosJubilacion">
+          <element api="M:ProyectoTrabajador.Trabajador.CalculoAnyosJubilacion" />
+          <element api="M:ProyectoTrabajador.Trabajador.CalculoAnyosJubilacion(System.Int32)" />
+        </element>
+        <element api="M:System.Object.Equals(System.Object)">
+          <apidata name="Equals" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" />
+          <parameters>
+            <parameter name="obj">
+              <type api="T:System.Object" ref="true" />
+            </parameter>
+          </parameters>
+          <returns>
+            <type api="T:System.Boolean" ref="false" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.Finalize">
+          <apidata name="Finalize" group="member" subgroup="method" />
+          <memberdata visibility="family" />
+          <proceduredata virtual="true" />
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.GetHashCode">
+          <apidata name="GetHashCode" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" />
+          <returns>
+            <type api="T:System.Int32" ref="false" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.GetType">
+          <apidata name="GetType" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="false" />
+          <returns>
+            <type api="T:System.Type" ref="true" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.MemberwiseClone">
+          <apidata name="MemberwiseClone" group="member" subgroup="method" />
+          <memberdata visibility="family" />
+          <proceduredata virtual="false" />
+          <returns>
+            <type api="T:System.Object" ref="true" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.ToString">
+          <apidata name="ToString" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" />
+          <returns>
+            <type api="T:System.String" ref="true" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="P:ProyectoTrabajador.Trabajador.Edad" />
+        <element api="P:ProyectoTrabajador.Trabajador.Nombre" />
+      </elements>
+      <containers>
+        <library assembly="ProyectoDocumentacion" module="ProyectoDocumentacion" kind="ConsoleApplication">
+          <assemblydata version="1.0.0.0 (1.0.0.0)" />
+        </library>
+        <namespace api="N:ProyectoTrabajador" />
+      </containers>
+      <file name="3b2a21c3-1289-8cc5-b88b-c9f7af8c1a1a" />
+    </api>
+    <api id="Methods.T:ProyectoTrabajador.Trabajador">
+      <topicdata name="Trabajador" group="list" subgroup="Methods" typeTopicId="T:ProyectoTrabajador.Trabajador" />
+      <apidata name="Trabajador" group="type" subgroup="class" />
+      <typedata visibility="public" serializable="false" defaultConstructor="M:ProyectoTrabajador.Trabajador.#ctor" />
+      <elements>
+        <element api="Overload:ProyectoTrabajador.Trabajador.CalculoAnyosJubilacion">
+          <element api="M:ProyectoTrabajador.Trabajador.CalculoAnyosJubilacion" />
+          <element api="M:ProyectoTrabajador.Trabajador.CalculoAnyosJubilacion(System.Int32)" />
+        </element>
+        <element api="M:System.Object.Equals(System.Object)">
+          <apidata name="Equals" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" />
+          <parameters>
+            <parameter name="obj">
+              <type api="T:System.Object" ref="true" />
+            </parameter>
+          </parameters>
+          <returns>
+            <type api="T:System.Boolean" ref="false" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.Finalize">
+          <apidata name="Finalize" group="member" subgroup="method" />
+          <memberdata visibility="family" />
+          <proceduredata virtual="true" />
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.GetHashCode">
+          <apidata name="GetHashCode" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" />
+          <returns>
+            <type api="T:System.Int32" ref="false" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.GetType">
+          <apidata name="GetType" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="false" />
+          <returns>
+            <type api="T:System.Type" ref="true" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.MemberwiseClone">
+          <apidata name="MemberwiseClone" group="member" subgroup="method" />
+          <memberdata visibility="family" />
+          <proceduredata virtual="false" />
+          <returns>
+            <type api="T:System.Object" ref="true" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.ToString">
+          <apidata name="ToString" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" />
+          <returns>
+            <type api="T:System.String" ref="true" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+      </elements>
+      <containers>
+        <library assembly="ProyectoDocumentacion" module="ProyectoDocumentacion" kind="ConsoleApplication">
+          <assemblydata version="1.0.0.0 (1.0.0.0)" />
+        </library>
+        <namespace api="N:ProyectoTrabajador" />
+        <type api="T:ProyectoTrabajador.Trabajador" />
+      </containers>
+      <file name="4400461a-8da2-1727-26bf-a5fb1b69d2f6" />
+    </api>
+    <api id="Properties.T:ProyectoTrabajador.Trabajador">
+      <topicdata name="Trabajador" group="list" subgroup="Properties" typeTopicId="T:ProyectoTrabajador.Trabajador" />
+      <apidata name="Trabajador" group="type" subgroup="class" />
+      <typedata visibility="public" serializable="false" defaultConstructor="M:ProyectoTrabajador.Trabajador.#ctor" />
+      <elements>
+        <element api="P:ProyectoTrabajador.Trabajador.Edad" />
+        <element api="P:ProyectoTrabajador.Trabajador.Nombre" />
+      </elements>
+      <containers>
+        <library assembly="ProyectoDocumentacion" module="ProyectoDocumentacion" kind="ConsoleApplication">
+          <assemblydata version="1.0.0.0 (1.0.0.0)" />
+        </library>
+        <namespace api="N:ProyectoTrabajador" />
+        <type api="T:ProyectoTrabajador.Trabajador" />
+      </containers>
+      <file name="7ae06135-51ef-3eea-53e6-7fee8860b9d9" />
+    </api>
+    <api id="Overload:ProyectoTrabajador.Trabajador.CalculoAnyosJubilacion">
+      <topicdata name="CalculoAnyosJubilacion" group="list" subgroup="overload" memberSubgroup="method" pseudo="true" />
+      <apidata name="CalculoAnyosJubilacion" group="member" subgroup="method" />
+      <elements>
+        <element api="M:ProyectoTrabajador.Trabajador.CalculoAnyosJubilacion" />
+        <element api="M:ProyectoTrabajador.Trabajador.CalculoAnyosJubilacion(System.Int32)" />
+      </elements>
+      <containers>
+        <library assembly="ProyectoDocumentacion" module="ProyectoDocumentacion" kind="ConsoleApplication">
+          <assemblydata version="1.0.0.0 (1.0.0.0)" />
+        </library>
+        <namespace api="N:ProyectoTrabajador" />
+        <type api="T:ProyectoTrabajador.Trabajador" ref="true" />
+      </containers>
+      <file name="e6eeb796-db6c-fb4d-1e26-02a920bd5db5" />
+    </api>
+    <api id="M:ProyectoTrabajador.Trabajador.#ctor">
+      <topicdata group="api" />
+      <apidata name=".ctor" group="member" subgroup="constructor" />
+      <memberdata visibility="public" special="true" />
+      <containers>
+        <library assembly="ProyectoDocumentacion" module="ProyectoDocumentacion" kind="ConsoleApplication">
+          <assemblydata version="1.0.0.0 (1.0.0.0)" />
+          <noAptca />
+        </library>
+        <namespace api="N:ProyectoTrabajador" />
+        <type api="T:ProyectoTrabajador.Trabajador" ref="true" />
+      </containers>
+      <file name="583d148f-25fd-72bd-70c4-b00a2b335be2" />
+    </api>
+    <api id="M:ProyectoTrabajador.Trabajador.CalculoAnyosJubilacion">
+      <topicdata group="api" />
+      <apidata name="CalculoAnyosJubilacion" group="member" subgroup="method" />
+      <memberdata visibility="public" overload="Overload:ProyectoTrabajador.Trabajador.CalculoAnyosJubilacion" />
+      <proceduredata virtual="false" />
+      <returns>
+        <type api="T:System.Int32" ref="false" />
+      </returns>
+      <containers>
+        <library assembly="ProyectoDocumentacion" module="ProyectoDocumentacion" kind="ConsoleApplication">
+          <assemblydata version="1.0.0.0 (1.0.0.0)" />
+          <noAptca />
+        </library>
+        <namespace api="N:ProyectoTrabajador" />
+        <type api="T:ProyectoTrabajador.Trabajador" ref="true" />
+      </containers>
+      <file name="36eed214-4656-0319-47f8-ffd506c6d8e1" />
+    </api>
+    <api id="M:ProyectoTrabajador.Trabajador.CalculoAnyosJubilacion(System.Int32)">
+      <topicdata group="api" />
+      <apidata name="CalculoAnyosJubilacion" group="member" subgroup="method" />
+      <memberdata visibility="public" overload="Overload:ProyectoTrabajador.Trabajador.CalculoAnyosJubilacion" />
+      <proceduredata virtual="false" />
+      <parameters>
+        <parameter name="edadJubilacion">
+          <type api="T:System.Int32" ref="false" />
+        </parameter>
+      </parameters>
+      <returns>
+        <type api="T:System.Int32" ref="false" />
+      </returns>
+      <containers>
+        <library assembly="ProyectoDocumentacion" module="ProyectoDocumentacion" kind="ConsoleApplication">
+          <assemblydata version="1.0.0.0 (1.0.0.0)" />
+          <noAptca />
+        </library>
+        <namespace api="N:ProyectoTrabajador" />
+        <type api="T:ProyectoTrabajador.Trabajador" ref="true" />
+      </containers>
+      <file name="f421df3c-d9e1-0b8c-3d91-8e752bc43cd1" />
+    </api>
+    <api id="P:ProyectoTrabajador.Trabajador.Edad">
+      <topicdata group="api" />
+      <apidata name="Edad" group="member" subgroup="property" />
+      <memberdata visibility="public" />
+      <proceduredata virtual="false" />
+      <propertydata get="true" set="true" />
+      <getter name="get_Edad" />
+      <setter name="set_Edad" />
+      <returns>
+        <type api="T:System.Int32" ref="false" />
+      </returns>
+      <containers>
+        <library assembly="ProyectoDocumentacion" module="ProyectoDocumentacion" kind="ConsoleApplication">
+          <assemblydata version="1.0.0.0 (1.0.0.0)" />
+          <noAptca />
+        </library>
+        <namespace api="N:ProyectoTrabajador" />
+        <type api="T:ProyectoTrabajador.Trabajador" ref="true" />
+      </containers>
+      <file name="1bf9d265-f928-5c02-6240-f3eae0d323f4" />
+    </api>
+    <api id="P:ProyectoTrabajador.Trabajador.Nombre">
+      <topicdata group="api" />
+      <apidata name="Nombre" group="member" subgroup="property" />
+      <memberdata visibility="public" />
+      <proceduredata virtual="false" />
+      <propertydata get="true" set="true" />
+      <getter name="get_Nombre" />
+      <setter name="set_Nombre" />
+      <returns>
+        <type api="T:System.String" ref="true" />
+      </returns>
+      <containers>
+        <library assembly="ProyectoDocumentacion" module="ProyectoDocumentacion" kind="ConsoleApplication">
+          <assemblydata version="1.0.0.0 (1.0.0.0)" />
+          <noAptca />
+        </library>
+        <namespace api="N:ProyectoTrabajador" />
+        <type api="T:ProyectoTrabajador.Trabajador" ref="true" />
+      </containers>
+      <file name="4ff804de-d26c-f1dc-579e-5413739a166f" />
+    </api>
+  </apis>
+</reflection>

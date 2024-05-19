@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>ProyectoDocumentacion</name>
+  </assembly>
+  <members>
+    <member name="T:ProyectoTrabajador.Trabajador">
+      <summary>
+        <para>Clase que representa a un trabajador de una empresa.</para>
+        <para>Los trabajadores pueden ser de las siguientes secciones:
+            <list type="bullet"><item><description>Marketing</description></item><item><description>Ventas</description></item><item><description>Logística</description></item></list></para>
+      </summary>
+    </member>
+    <member name="F:ProyectoTrabajador.Trabajador.EdadJubilacionDefecto">
+      <summary>
+            Edad por defecto de jubilación del trabajador.
+            </summary>
+    </member>
+    <member name="F:ProyectoTrabajador.Trabajador.nombre">
+      <summary>
+            Nombre y apellidos del trabajador.
+            </summary>
+    </member>
+    <member name="F:ProyectoTrabajador.Trabajador.edad">
+      <summary>
+            Edad del trabajador.
+            </summary>
+    </member>
+    <member name="P:ProyectoTrabajador.Trabajador.Nombre">
+      <summary>
+            Obtiene y establece el nombre y apellidos del trabajador.
+            </summary>
+      <value>El nombre y apellidos del trabajador.</value>
+    </member>
+    <member name="P:ProyectoTrabajador.Trabajador.Edad">
+      <summary>
+            Obtiene y establece la edad del trabajador.
+            La edad debe estar entre 1 y 150.
+            </summary>
+      <value>Edad del trabajador.</value>
+      <exception cref="T:System.ArgumentOutOfRangeException">Lanzada cuando el valor de la edad no está en el rango permitido.</exception>
+    </member>
+    <member name="M:ProyectoTrabajador.Trabajador.CalculoAnyosJubilacion">
+      <summary>
+            Calcula los años que le quedan al trabajador para su jubilación.
+            </summary>
+      <remarks>Este método usa sobrecarga.</remarks>
+      <returns>Los años que le quedan al trabajador para su jubilación.</returns>
+    </member>
+    <member name="M:ProyectoTrabajador.Trabajador.CalculoAnyosJubilacion(System.Int32)">
+      <summary>
+        <para>Calcula los años que le quedan al trabajador para su jubilación.</para>
+        <para>El valor del parámetro <paramref name="edadJubilacion" /> debe ser menor que <see cref="F:ProyectoTrabajador.Trabajador.EdadJubilacionDefecto" /> y mayor o igual que la edad del trabajador.</para>
+      </summary>
+      <remarks>Este método usa sobrecarga.</remarks>
+      <param name="edadJubilacion">Edad personalizada de jubilación, distinta de la edad por defecto.</param>
+      <returns>Los años que le quedan al trabajador para su jubilación.</returns>
+      <exception cref="T:System.ArgumentOutOfRangeException">Lanzada cuando el valor de <paramref name="edadJubilacion" /> no cumple con las condiciones especificadas.</exception>
+    </member>
+    <member name="N:ProyectoTrabajador">
+      <summary />
+    </member>
+  </members>
+</doc>
