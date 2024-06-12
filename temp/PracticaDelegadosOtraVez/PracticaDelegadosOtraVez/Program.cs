@@ -24,13 +24,17 @@
             //Calcular(valor1, valor2, division);
             ProcesadorCadena mayus = (cadena) => cadena.ToUpper();
             ProcesadorCadena minus = (cadena) => cadena.ToLower();
-            ProcesadorCadena 
+            ProcesarCadena("HOLA", minus);
         }
         public delegate void MiDelegado(string value);
         public delegate void DelegadoEnteros(int value);
         public delegate bool Visitor(int value);
         public delegate double Calculador(int value1, int value2);
         public delegate string ProcesadorCadena(string cadena);
+        public static void ProcesarCadena(string cadena, ProcesadorCadena procesador)
+        {
+            Console.WriteLine(procesador(cadena));
+        }
         public static void Calcular(int v1, int v2, Calculador calculador)
         {
             Console.WriteLine(calculador(v1, v2));
