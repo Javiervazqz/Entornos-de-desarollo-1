@@ -1,39 +1,51 @@
 ﻿using ApplicationModel;
 using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Collections.ObjectModel;
 using System.Windows;
-using System.Windows.Media.Imaging;
+using System.Windows.Input;
 
-namespace Wallapop
+namespace CompraVentaProductos
 {
     public partial class MainWindow : Window
     {
-        public ObservableCollection<Product> Products { get; set; }
+        private MainViewModel viewModel;
 
         public MainWindow()
         {
             InitializeComponent();
-
-            Products = new ObservableCollection<Product>
-            {
-                new Product { Name = "Shrek", Description = "Peluche Shrek verde como un moco", ImagePath = "C:\\Users\\javvazgar\\Documents\\GitHub\\Entornos-de-desarollo-1\\PROG\\EV3\\Wallapop\\imagesshrek.jpeg", Price = 9999.99 },
-                new Product { Name = "Artículo 2", Description = "Descripción del artículo 2", ImagePath = "C:\\Users\\javvazgar\\Documents\\GitHub\\Entornos-de-desarollo-1\\PROG\\EV3\\Wallapop\\images\\image2.jpg", Price = 15.99 }
-            };
-
-            DataContext = this;
+            viewModel = new MainViewModel();
+            DataContext = viewModel;
         }
 
-        private BitmapImage LoadImage(string imagePath)
+        private void BtnAñadirProducto_Click(object sender, RoutedEventArgs e)
         {
-            BitmapImage image = new BitmapImage();
-            image.BeginInit();
-            image.UriSource = new Uri(imagePath, UriKind.RelativeOrAbsolute);
-            image.EndInit();
-            return image;
+
+        }
+
+        private void ProductImage_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            var producto = ((FrameworkElement)sender).DataContext as Product;
+            if (producto != null)
+            {
+                var detailWindow = new ProductDetailWindow(producto);
+                detailWindow.Show();
+            }
+        }
+
+        private void ProductName_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            var producto = ((FrameworkElement)sender).DataContext as Product;
+            if (producto != null)
+            {
+                var detailWindow = new ProductDetailWindow(producto);
+                detailWindow.Show();
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            AddProductWindow newWindow = new AddProductWindow();
+            newWindow.Show();
         }
     }
 }
