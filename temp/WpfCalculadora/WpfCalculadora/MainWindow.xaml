@@ -1,0 +1,19 @@
+﻿<Window x:Class="WpfCalculadora.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfCalculadora"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label Content="Primer numero:" HorizontalAlignment="Left" Margin="169,85,0,0" VerticalAlignment="Top"/>
+        <Label Content="Segundo numero:" HorizontalAlignment="Left" Margin="169,120,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="266,90,0,0" TextWrapping="Wrap" Text="num1" VerticalAlignment="Top" Width="120" Name="TextBox1"/>
+        <TextBox HorizontalAlignment="Left" Margin="279,124,0,0" TextWrapping="Wrap" Text="num2" VerticalAlignment="Top" Width="120" Name="TextBox2"/>
+        <Button Content="Sumar" HorizontalAlignment="Left" Margin="196,174,0,0" VerticalAlignment="Top" Click="Button_Click" Height="76" Width="143"/>
+        <Image HorizontalAlignment="Left" Height="216" Margin="485,111,0,0" VerticalAlignment="Top" Width="230" Source="/dio_duck.jpg" Name="MyImage"/>
+        <Button Content="Cambiar fotico" HorizontalAlignment="Left" Margin="533,311,0,0" VerticalAlignment="Top" Height="47" Width="134" Click="Button_Click_1"/>
+
+    </Grid>
+</Window>
